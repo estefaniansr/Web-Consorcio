@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Contacto</title>
+
+    <h2 id="titulo">Consorcio</h2>
+    <button id="inicio">Inicio</button>
+    <button id="empresa">Empresa</button>
+    <select id="servicos">Servicios</select>
+    <button id="contacto">Contacto</button>
+</head>
+
+<body>
+    <h1 id="contacto-text">Contacto</h1>
+
+    <div class="formulario">
+        <h2 id="presupuesto">presupuesto</h2>
+        <p id="info">Info</p>
+
+        <form class="datos">
+
+            <input type="text" id="nombre" placeholder="Nombre completo"><br>
+            <input type="email" id="email" placeholder="Email"><br>
+            <input type="tel" id="telefono" placeholder="Teléfono"><br>
+            <input type="text" id="direccion" placeholder="Dirección"><br>
+            <input type="number" id="cantDep" placeholder="Cantidad de departamentos"><br>
+            <input type="number" id="cantCo" placeholder="Cantidad de cocheras"><br>
+            <input type="text" id="amenities" placeholder="Amenities"><br>
+            <div class="encargado">
+                <p id="encargado-txt">Encargado</p>
+                <input type="radio" id="encargadoSi"> Si
+                <input type="radio" id="encargadoNo"> No
+            </div>
+            <input type="text" id="mensaje" placeholder="Mensaje">
+        </form>
+        <button id="enviar-btn">Enviar</button>
+    </div>
+    <div class="infoExtra">
+        <div class="telefono">
+            <i class="fa-solid fa-phone"></i>
+            <p id="numero">011...</p>
+            <p id="nombre">Nombre</p>
+        </div>
+        <div class="horario">
+            <i class="fa-solid fa-clock"></i>
+            <p id="hora">Hora</p>
+            <p id="dia">días</p>
+        </div>
+        <div class="ubicacion">
+            <i class="fa-solid fa-location-dot"></i>
+            <p id="lugar">Lugar</p>
+            <p id="info">Info</p>
+        </div>
+
+        <div class="wpp">
+            <button class="btn btn-success w-100 mt-2" onclick="pedirWhatsApp('${producto.nombre}')">
+                          <i class="fab fa-whatsapp"></i>   
+        </div>
+
+        <script>
+        function pedirWhatsApp(nombre) {
+            const mensaje = `Hola! me comunico para...`;
+            const numero = "Num";
+            const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, "_blank");
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            mostrarProductos();
+            if (localStorage.getItem('modo') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        })
+
+        document.addEventListener('DOMContentLoaded', () => {
+            mostrarProductos();
+        });
+    </script>
+
+</body>
+<footer>
+    <p id="infoExtra">Si sos proovedor...</p>
+</footer>
+
+</html>
