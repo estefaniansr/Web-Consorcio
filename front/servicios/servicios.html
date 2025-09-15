@@ -9,18 +9,43 @@
     <h2 id="titulo">Servicios</h2>
 
 
-    <a href="../index/index.html">Inicio</a>
-    <a href="../empresa/empresa.html">Empresa</a>
-    <a href="../servicios/servicios.html">Servicios</a>
-    <a href="../contacto/contacto.html">Contacto</a>
+    <a class="nav-link" href="../index/index.html">Inicio</a>
+    <a class="nav-link" href="../empresa/empresa.html">Empresa</a>
+    <a class="nav-link" href="../servicios/servicios.html">Servicios</a>
+    <a class="nav-link" href="../contacto/contacto.html">Contacto</a>
 </head>
 
-<body>
+<body id="servicios">
+    
     <h1 id="contacto-text">Nuestros Servicios para la Administración de Consorcios</h1>
-    <img src="../img/servicios.jpg" alt="administracion de consorcios"  style="max-width: 50%; height: auto;">    
-     
+    <img id="img-servicios" src="../img/servicios.jpg" alt="administracion de consorcios"  style="max-width: 50%; height: auto;">    
+     <div class="info-servicios">
 <p>En Administración de Consorcios, entendemos que un edificio es más que solo un lugar para vivir: es una comunidad. Por eso, nos dedicamos a ofrecer una administración de consorcios transparente, eficiente y profesional, liberando a los propietarios de las preocupaciones diarias y garantizando un ambiente de convivencia armonioso y valorizado.</p>
 <p>Nos especializamos en una gestión integral que cubre todos los aspectos necesarios para el correcto funcionamiento de su propiedad. Nuestra misión es simple: cuidar su patrimonio como si fuera nuestro.</p>
+</div>
+  <div class="wpp">
+            <button class="btn btn-success w-100 mt-2" onclick="pedirWhatsApp('${producto.nombre}')">
+                          <i class="fab fa-whatsapp"></i>   
+        </div>
+
+        <script>
+        function pedirWhatsApp(nombre) {
+            const mensaje = `Hola! me comunico para...`;
+            const numero = "Num";
+            const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, "_blank");
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            mostrarProductos();
+            if (localStorage.getItem('modo') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        })
+
+        document.addEventListener('DOMContentLoaded', () => {
+            mostrarProductos();
+        });
+    </script>
 </body>
 <footer>
     
