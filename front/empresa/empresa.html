@@ -9,31 +9,55 @@
     <h2 id="titulo">Consorcio</h2>
 
 
-    <a href="../index/index.html">Inicio</a>
-    <a href="../empresa/empresa.html">Empresa</a>
-    <a href="../servicios/servicios.html">Servicios</a>
-    <a href="../contacto/contacto.html">Contacto</a>
+    <a class="nav-link" href="../index/index.html">Inicio</a>
+    <a class="nav-link" href="../empresa/empresa.html">Empresa</a>
+    <a class="nav-link" href="../servicios/servicios.html">Servicios</a>
+    <a class="nav-link" href="../contacto/contacto.html">Contacto</a>
 </head>
 
-<body>
+<body id="empresa">
+   
     <h1 id="contacto-text">Acerca de la Empresa</h1>
-    <img src="../img/calculadora.jpg" alt="una calculadora"  style="max-width: 90%; height: auto;">
-    <p>Acerca de Nosotros
-En Administración De Consorcios, transformamos la administración de consorcios en una experiencia transparente, eficiente y sin complicaciones. Entendemos que cada edificio y cada comunidad de vecinos es única, y por eso nuestro compromiso va más allá de la simple gestión: nos dedicamos a construir relaciones sólidas basadas en la confianza y la comunicación. </p>
+    <img id="img-empresa"src="../img/calculadora.jpg" alt="una calculadora"  style="max-width: 90%; height: auto;">
+   <div class="texto-nosotros">
+   <h2> Sobre nosotros</h2>
+<p>Somos un equipo familiar dedicado a la administración de consorcios,  nuestro objetivo es brindar soluciones, nuestra misión es transformar la gestión de consorcios en un proceso transparente, eficiente y sencillo para los propietarios y residentes.
+<p>Nos destacamos por nuestro enfoque cercano: entendemos las necesidades de cada comunidad y trabajamos para generar armonía y organización en cada edificio o conjunto que administramos. Creemos que la confianza se construye día a día, escuchando, resolviendo y anticipándonos a los desafíos que surgen en la administración de consorcios.</p>
+<p>Al elegirnos, no solo contratan un servicio profesional, sino también un compromiso genuino de cuidado y atención personalizada. Para nosotros, cada consorcio es más que un conjunto de departamentos: es un hogar, y nuestro objetivo es que su administración sea un proceso claro, tranquilo y eficiente.</p>
+<h3>Nuestros Pilares</h3>
+<p>Cercanía y confianza: construimos relaciones sólidas con cada comunidad, escuchando y acompañando a los propietarios y residentes en todo momento.</p>
 
-<p>Desde nuestra fundación hace diez años, hemos trabajado con un único objetivo en mente: simplificar la vida de los propietarios y residentes. Nos encargamos de todo, desde la gestión financiera y el mantenimiento edilicio hasta la resolución de conflictos y la atención al cliente, para que los espacios comunes sean lugares de armonía y disfrute para todos.</p>
+<p>Transparencia y claridad: priorizamos una gestión abierta y comprensible, donde cada movimiento administrativo es accesible y claro para todos.</p>
 
-<h2>Nuestros Pilares</h2>
-<p>Transparencia Total: Creemos que la información es poder. Por eso, ofrecemos acceso claro y en tiempo real a las finanzas del consorcio, permitiendo a los propietarios saber exactamente en qué se invierten sus expensas.</p>
+<p>Eficiencia y organización: trabajamos para que la administración sea ágil, ordenada y sin complicaciones, optimizando recursos y procesos.</p>
 
-<p>Gestión Eficaz: Nuestro equipo de profesionales está capacitado para optimizar los recursos, reducir costos y asegurar que cada tarea se realice con la máxima eficiencia y calidad.</p>
+<p>Proactividad y soluciones: nos anticipamos a los problemas y ofrecemos respuestas rápidas, buscando siempre el bienestar de la comunidad.<p>
 
-<p>Tecnología al Servicio de la Comunidad: Utilizamos herramientas digitales avanzadas para una comunicación fluida, reportes detallados y una gestión ágil, facilitando el día a día de todos los vecinos.</p>
+<p>Compromiso humano: cada consorcio es más que un edificio: es un hogar. Por eso brindamos un servicio personalizado y con verdadero cuidado.</p>
+</div>
+  <div class="wpp">
+            <button class="btn btn-success w-100 mt-2" onclick="pedirWhatsApp('${producto.nombre}')">
+                          <i class="fab fa-whatsapp"></i>   
+        </div>
 
-<p>Cercanía y Confianza: No somos solo administradores; somos socios estratégicos. Estamos siempre disponibles para escuchar, asesorar y solucionar cualquier inconveniente, construyendo una relación de confianza duradera con cada consorcio que administramos.<p>
+        <script>
+        function pedirWhatsApp(nombre) {
+            const mensaje = `Hola! me comunico para pedir un presupuesto`;
+            const numero = "+5491170580813";
+            const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, "_blank");
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            mostrarProductos();
+            if (localStorage.getItem('modo') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        })
 
-<p>En Administración De Consorcios, nos enorgullece ser el socio confiable que garantiza el bienestar y el valor de su propiedad. Déjanos ocuparnos de la gestión para que tú y tu comunidad solo se preocupen por disfrutar de su hogar.</p>
-
+        document.addEventListener('DOMContentLoaded', () => {
+            mostrarProductos();
+        });
+    </script>
 </body>
 <footer>
     

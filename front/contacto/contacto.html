@@ -10,36 +10,39 @@
     <h2 id="titulo">Consorcio</h2>
 
 
-     <a href="../index/index.html">Inicio</a>
-    <a href="../empresa/empresa.html">Empresa</a>
-    <a href="../servicios/servicios.html">Servicios</a>
-    <a href="../contacto/contacto.html">Contacto</a>
+     <a class="nav-link" href="../index/index.html">Inicio</a>
+    <a class="nav-link" href="../empresa/empresa.html">Empresa</a>
+    <a class="nav-link" href="../servicios/servicios.html">Servicios</a>
+    <a class="nav-link" href="../contacto/contacto.html">Contacto</a>
 </head>
 
-<body>
+<body id="contacto">
     <h1 id="contacto-text">Contacto</h1>
 <img src="../img/contacto.jpg" alt="medios de comunicación"  style="max-width: 50%; height: auto;"> 
     <div class="formulario">
-        <h2 id="presupuesto">presupuesto</h2>
-        <p id="info">Info</p>
+        <h2 id="presupuesto">Solicitar presupuesto</h2>
+        <p id="info">Rellenar formulario para solicitar presupuesto</p>
 
-        <form class="datos">
-
-            <input type="text" id="nombre" placeholder="Nombre completo"><br>
-            <input type="email" id="email" placeholder="Email"><br>
-            <input type="tel" id="telefono" placeholder="Teléfono"><br>
-            <input type="text" id="direccion" placeholder="Dirección"><br>
-            <input type="number" id="cantDep" placeholder="Cantidad de departamentos"><br>
-            <input type="number" id="cantCo" placeholder="Cantidad de cocheras"><br>
-            <input type="text" id="amenities" placeholder="Amenities"><br>
-            <div class="encargado">
-                <p id="encargado-txt">Encargado</p>
-                <input type="radio" id="encargadoSi"> Si
-                <input type="radio" id="encargadoNo"> No
-            </div>
-            <input type="text" id="mensaje" placeholder="Mensaje">
+        <form class="datos" action="https://formsubmit.co/eeromeronsr@gmail.com" method="POST" >
+            <label for="Nombre completo">Nombre</label>
+            <input type="text" name="Nombre completo"><br>
+            <label for="Email">Email</label>
+            <input type="email" name="Email"><br>
+            <label for="Teléfono">Teléfono</label>
+            <input type="tel" name="Teléfono"><br>
+            <label for="Dirección">Dirección</label>
+            <input type="text" name="Dirección"><br>
+            <label for="Cantidad de departamentos">Cantidad de departamentos</label>
+            <input type="number" name="Cantidad de departamentos"><br>
+            <label for="Cantidad de cocheras">Cantidad de cocheras</label>
+            <input type="number" name="Cantidad de cocheras"><br>
+            <label for="Amenities">Amenities</label>
+            <input type="text" name="Amenities"><br>
+        
+            <input type="text" id="mensaje" name="Mensaje">
+            <input type="submit" value="enviar">
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/front/contacto/contacto.html">
         </form>
-        <button id="enviar-btn">Enviar</button>
     </div>
     <div class="infoExtra">
         <div class="telefono">

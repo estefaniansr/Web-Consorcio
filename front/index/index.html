@@ -8,15 +8,15 @@
     <h2 id="titulo">Consorcio</h2>
 
     <!-- barra de navegacion-->    
-   <a href="../index/index.html">Inicio</a>
-    <a href="../empresa/empresa.html">Empresa</a>
-    <a href="../servicios/servicios.html">Servicios</a>
-    <a href="../contacto/contacto.html">Contacto</a>
+   <a class="nav-link" href="../index/index.html">Inicio</a>
+    <a class="nav-link" href="../empresa/empresa.html">Empresa</a>
+    <a class="nav-link" href="../servicios/servicios.html">Servicios</a>
+    <a class="nav-link" href="../contacto/contacto.html">Contacto</a>
     
     <!-- <a href="../contacto/contacto.html">Contacto</a> -->
 </head>
 
-<body>
+<body id="Inicio">
     <div class="presentacion" style="background-image: url(../img/obelisco.jpg);">
         
         <h1 id="presentacion">Administración de consorcios</h1>
@@ -25,8 +25,31 @@
         <p>En Administración de consorcios, transformamos la administración de consorcios en una experiencia transparente, eficiente y sin complicaciones. Sabemos que tu hogar es tu espacio más importante, y por eso nuestro compromiso es cuidar cada detalle para que tu edificio y tu vida en él sean más tranquilos y armónicos.</p>
         <p>Nuestro equipo de profesionales está aquí para ofrecerte un servicio personalizado, con soluciones innovadoras que te mantendrán siempre informado/a sobre la gestión de tu consorcio. Desde el mantenimiento y las finanzas hasta la comunicación con vecinos, estamos a tu lado para que disfrutes de tu propiedad sin preocupaciones.</p>
         <p>Te invitamos a explorar nuestro sitio web y descubrir cómo podemos simplificar la administración de tu consorcio. Estamos aquí para servirte y construir juntos un futuro más organizado y en comunidad.</p>
-    
+    </div>
+  <div class="wpp">
+            <button class="btn btn-success w-100 mt-2" onclick="pedirWhatsApp('${producto.nombre}')">
+                          <i class="fab fa-whatsapp"></i>   
+            </button>
+        </div>
 
+        <script>
+        function pedirWhatsApp(nombre) {
+            const mensaje = `Hola! me comunico para...`;
+            const numero = "Num";
+            const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, "_blank");
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            mostrarProductos();
+            if (localStorage.getItem('modo') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        })
+
+        document.addEventListener('DOMContentLoaded', () => {
+            mostrarProductos();
+        });
+    </script>
 </body>
 
 </html>
