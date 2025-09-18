@@ -11,17 +11,23 @@
 
 <body>
     <header>
-        <h2 id="titulo">Consorcio</h2>
+        <img src="img/logo.png" class="Logo" alt="Logo">
         <!-- barra de navegacion-->
         <a href="../index/index.html">Inicio</a>
         <a href="../empresa/empresa.html">Empresa</a>
-        <a href="../servicios/servicios.html">Servicios</a>
+        <select onchange="location = this.value;">
+            <option value="" disabled selected hidden>Servicios</option>
+            <option value="../servicios/consorcio.html">Consorcio</option>
+            <option value="../servicios/alquileres.html">Alquileres</option>
+        </select>
+
         <a href="../contacto/contacto.html">Contacto</a>
     </header>
 
 
-    <h1 id="contacto-text">Contacto</h1>
+    <h1 id="contacto-titulo">Contacto</h1>
     <div class="formulario">
+
         <h2 id="presupuesto">presupuesto</h2>
         <p id="info">Info</p>
 
@@ -71,6 +77,10 @@
 </body>
 <footer>
     <p id="infoExtra">Si sos proovedor...</p>
+
+    <div class="copy">
+        <p>&copy; 2025 nombre del consorcio. Todos los derechos reservados.</p>
+    </div>
 </footer>
 
 </html>
