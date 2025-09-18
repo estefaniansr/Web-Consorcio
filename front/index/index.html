@@ -4,29 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="../js/modal.js"></script>
+    <script src="../js/btn-wpp.js"></script>
     <title>Consorcio</title>
-    <h2 id="titulo">Consorcio</h2>
 
-    <!-- barra de navegacion-->    
-   <a href="../index/index.html">Inicio</a>
-    <a href="../empresa/empresa.html">Empresa</a>
-    <a href="../servicios/servicios.html">Servicios</a>
-    <a href="../contacto/contacto.html">Contacto</a>
-    
-    <!-- <a href="../contacto/contacto.html">Contacto</a> -->
 </head>
 
 <body>
-    <div class="presentacion" style="background-image: url(../img/obelisco.jpg);">
-        
-        <h1 id="presentacion">Administración de consorcios</h1>
-        <!--img-->
+    <header>
+        <h2 id="titulo">Consorcio</h2>
+        <!-- barra de navegacion-->
+        <a href="../index/index.html">Inicio</a>
+        <a href="../empresa/empresa.html">Empresa</a>
+        <a href="../servicios/servicios.html">Servicios</a>
+        <a href="../contacto/contacto.html">Contacto</a>
+    </header>
+    <div class="presentacion">
 
-        <p>En Administración de consorcios, transformamos la administración de consorcios en una experiencia transparente, eficiente y sin complicaciones. Sabemos que tu hogar es tu espacio más importante, y por eso nuestro compromiso es cuidar cada detalle para que tu edificio y tu vida en él sean más tranquilos y armónicos.</p>
-        <p>Nuestro equipo de profesionales está aquí para ofrecerte un servicio personalizado, con soluciones innovadoras que te mantendrán siempre informado/a sobre la gestión de tu consorcio. Desde el mantenimiento y las finanzas hasta la comunicación con vecinos, estamos a tu lado para que disfrutes de tu propiedad sin preocupaciones.</p>
-        <p>Te invitamos a explorar nuestro sitio web y descubrir cómo podemos simplificar la administración de tu consorcio. Estamos aquí para servirte y construir juntos un futuro más organizado y en comunidad.</p>
-    
+        <h1 id="presentacion">Administración de consorcios ...</h1>
+        <!--img-->
+    </div>
+
+    <div class="nosotros">
+        <h2>Nosotros</h2>
+        <p id="objetivo">Nuestro principal objetivo ...</p>
+    </div>
+
+    <div class="Servicios">
+        <h2>Servicios</h2>
+        <div class="servicio" onclick="abrirModal('Atención Personalizada y Visitas Periódicas')">
+            <i class="fa-solid fa-handshake"></i>
+        </div>
+        <div class="servicio" onclick="abrirModal('Liquidación y Recaudación de Expensas')">
+            <i class="fa-solid fa-building"></i>
+        </div>
+        <div class="servicio" onclick="abrirModal('Manejo de fondos')">
+            <i class="fa-solid fa-money-check-dollar"></i>
+        </div>
+        <div class="servicio" onclick="abrirModal('Mantenimiento preventivo')">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+        </div>
+        <div class="servicio" onclick="abrirModal('Asesoramiento de Arquitectos, Abogados y Contadores')">
+            <i class="fa-solid fa-message"></i>
+        </div>
+        <div class="servicio"
+            onclick="abrirModal('Control sobre la ejecución de trabajos y/o prestación de servicios de los proveedores.')">
+            <i class="fa-solid fa-person"></i>
+        </div>
+
+
+    </div>
+    </section>
+    </div>
+    <div id="modal-servicios" class="modal">
+        <div class="modal-content">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <h3 id="modal-nombre"></h3>
+        </div>
+    </div>
+
+    <div class="auditoria"> <i class="fa-solid fa-calculator"></i>
+        <h2>Auditoría de consorcios</h2>
+        <p>Permite a los propietarios del edificio auditado, conocer los detalles de la gestión del
+            consorcio por parte del actual Administrador.</p>
+    </div>
 
 </body>
+<footer>
+    <div class="contacto">
+        <div class="telefono">
+            <i class="fa-solid fa-phone"></i>
+            <p id="numero">Numero</p>
+            <p id="nombre">Nombre</p>
+            <p id="
+            matricula">Matricula</p>
+        </div>
+        <div class="horario">
+            <i class="fa-solid fa-clock"></i>
+            <p id="hora">Hora</p>
+            <p id="dia">días</p>
+        </div>
+        <div class="ubicacion">
+            <i class="fa-solid fa-location-dot"></i>
+            <p id="lugar">Lugar</p>
+            <p id="info">Info</p>
+        </div>
+    </div>
+
+
+
+    <div class="copy">
+        <p>&copy; 2025 nombre del consorcio. Todos los derechos reservados.</p>
+    </div>
+</footer>
 
 </html>
