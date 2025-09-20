@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="../js/modal.js"></script>
+    <script src="../js/modal-servicio.js"></script>
     <script src="../js/btn-wpp.js"></script>
-    <title>Inicio</title>
+    <title>Consorcio</title>
 
 </head>
 
@@ -26,58 +26,69 @@
         <a href="../contacto/contacto.html">Contacto</a>
     </header>
 
-    <div class="presentacion">
+    <div class="consorcio">
 
-        <h1 id="presentacion">Administración de consorcios ...</h1>
-        <!--img-->
-    </div>
+        <h1 id="consorcio-titulo">Consorcio</h1>
 
-    <div class="nosotros">
-        <h2>Nosotros</h2>
-        <p id="objetivo">Nuestro principal objetivo ...</p>
-    </div>
-
-    <div class="Servicios">
-        <h2>Servicios</h2>
-        <div class="servicio" onclick="abrirModal('Atención Personalizada y Visitas Periódicas')">
+        <div class="servicio"
+            onclick="abrirModal('Atención Personalizada y Visitas Periódicas', 'Nos adecuamos a personas y consorcios con prioridad a su disponibilidad. Hacemos visitas frecuentes a cada consorcio.')">
             <i class="fa-solid fa-handshake"></i>
         </div>
-        <div class="servicio" onclick="abrirModal('Liquidación y Recaudación de Expensas')">
+        <div class="servicio"
+            onclick="abrirModal('Liquidación y Recaudación de Expensas','Resumen de gastos, rendición de cuentas, confección de liquidación de expensas y recibos de pago. Seguimiento de deudores.')">
             <i class="fa-solid fa-building"></i>
         </div>
-        <div class="servicio" onclick="abrirModal('Manejo de fondos')">
+        <div class="servicio"
+            onclick="abrirModal('Manejo de fondos','Liquidación de Sueldos y Jornales, liquidaciones impositivas. Gestión clara y transparente de los fondos y cuentas bancarias del consorcio.')">
             <i class="fa-solid fa-money-check-dollar"></i>
         </div>
-        <div class="servicio" onclick="abrirModal('Mantenimiento preventivo')">
+        <div class="servicio"
+            onclick="abrirModal('Mantenimiento preventivo','Mantenimiento de la propiedad de una manera preventiva. Proveedores, solicitud depresupuestos, contratación y control de los servicios.')">
             <i class="fa-solid fa-screwdriver-wrench"></i>
         </div>
-        <div class="servicio" onclick="abrirModal('Asesoramiento de Arquitectos, Abogados y Contadores')">
+        <div class="servicio"
+            onclick="abrirModal('Asesoramiento de Arquitectos, Abogados y Contadores','Contamos con un equipo de expertos para la resolución de problemas.')">
             <i class="fa-solid fa-message"></i>
         </div>
         <div class="servicio"
-            onclick="abrirModal('Control sobre la ejecución de trabajos y/o prestación de servicios de los proveedores.')">
+            onclick="abrirModal('Control sobre la ejecución de trabajos y/o prestación de servicios de los proveedores.', ' A lo largo de los años hemos formado un equipo eficiente y eficaz para resolver todo tipo de situaciones.')">
             <i class="fa-solid fa-person"></i>
         </div>
+
     </div>
 
-    <div id="modal-servicios" class="modal">
+    <div id="modal-consorcio" class="modal">
         <div class="modal-content">
             <span class="cerrar" onclick="cerrarModal()">&times;</span>
             <h3 id="modal-nombre"></h3>
+            <p id="modal-desc"></p>
         </div>
-    </div>
-
-    <div class="auditoria"> <i class="fa-solid fa-calculator"></i>
-        <h2>Auditoría de consorcios</h2>
-        <p>Permite a los propietarios del edificio auditado, conocer los detalles de la gestión del
-            consorcio por parte del actual Administrador.</p>
     </div>
 
     <div class="wpp">
         <button class="btn btn-success w-100 mt-2" onclick="pedirWhatsApp('${producto.nombre}')">
             <i class="fab fa-whatsapp"></i>
     </div>
+
+    <div class="auditoria">
+
+        <div class="auditoria-consorcios">
+            <h2>Auditoría de consorcios</h2>
+            <p>Permite a los propietarios del edificio auditado...</p>
+        </div>
+
+        <div class="consiste">
+            <h3>En que consiste?</h3>
+            <p>explicacion</p>
+        </div>
+        <div class="utilidad">
+            <h3>utilidad</h3>
+            <p>explicacion</p>
+        </div>
+    </div>
+
 </body>
+
 <footer>
     <div class="contacto">
         <div class="telefono">

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="../js/modal-servicio.js"></script>
+    <script src="../js/btn-wpp.js"></script>
+    <title>Alquileres</title>
+
+</head>
+
+<body>
+    <header>
+        <img src="img/logo.png" class="Logo" alt="Logo">
+        <!-- barra de navegacion-->
+        <a href="../index/index.html">Inicio</a>
+        <a href="../empresa/empresa.html">Empresa</a>
+        <select onchange="location = this.value;">
+            <option value="" disabled selected hidden>Servicios</option>
+            <option value="../servicios/consorcio.html">Consorcio</option>
+            <option value="../servicios/alquileres.html">Alquileres</option>
+        </select>
+
+        <a href="../contacto/contacto.html">Contacto</a>
+    </header>
+
+    <div class="alquileres">
+
+        <h1 id="alquieres-titulo">Alquileres</h1>
+
+        <h2 id="ofrecemos">Ofrecemos un servicio completo</h2>
+        <p id="descripcion">El servicio integral incluye la evaluación del espacio, ..</p>
+
+        <div class="servicio" onclick="abrirModal('EQUIPÁ TU PROPIEDAD', 'Para alquilar temporariamente')">
+            <i class="fa-solid fa-couch"></i>
+        </div>
+        <div class="servicio" onclick="abrirModal('PUBLICACIÓN', 'Con la ayuda de nuestro equipo de fotógrafo')">
+            <i class="fa-solid fa-camera"></i>
+        </div>
+        <div class="servicio"
+            onclick="abrirModal('ATENCIÓN A HUÉSPEDES', 'Nos encargamos de realizar el chek in y check out...')">
+            <i class="fa-solid fa-handshake"></i>
+        </div>
+        <div class="servicio"
+            onclick="abrirModal('REPOSICIÓN Y LIMPIEZA', 'Nos encargamos de la limpieza en cada recambio de...')">
+            <i class="fa-solid fa-paint-roller"></i>
+        </div>
+        <div class="servicio" onclick="abrirModal('MANTENIMIENTO', 'Estamos en contacto constante con los huéspedes')">
+            <i class="fa-solid fa-message"></i>
+        </div>
+        <div class="servicio"
+            onclick="abrirModal('RENDICIÓN DE CUENTAS', 'Mensualmente nos encargamos de llevar lo recaudado')">
+            <i class="fa-solid fa-calculator"></i>
+        </div>
+
+
+    </div>
+
+    <div id="modal-consorcio" class="modal">
+        <div class="modal-content">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <h3 id="modal-nombre"></h3>
+            <p id="modal-desc"></p>
+        </div>
+    </div>
+
+    <div class="wpp">
+        <button class="btn btn-success w-100 mt-2" onclick="pedirWhatsApp('${producto.nombre}')">
+            <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <div class="rentabilidad">
+        <i class="fa-solid fa-dollar-sign"></i>
+        <h2 id="rentabilidad-titulo">Rentabilidad</h2>
+        <ul>
+            <li id="MayorRentabilidad">Mayor rentabilidad</li>
+            <li id="Duplicar">Duplica la rentabilidad de un alquiler normal</li>
+            <li id="precios">Actualización de precios</li>
+            <li id="precioAlquiler">El precio del alquiler lo fija el propietario y lo actualiza cuando quiere.</li>
+        </ul>
+    </div>
+    <div class="tiempo">
+        <i class="fa-solid fa-clock"></i>
+        <h2 id="tiempo-titulo">Más tiempo para vos</h2>
+        <ul>
+            <li id="preocupar"> No tenés que ocuparte de nada, nuestro servicio lo cubre todo</li>
+            <li id="nuestroServicio"> Con nuestro servicio mantenés ocupado el departamento y ganás más del doble  que un alquiler tradicional.</li>
+            <li id="MantieneNuevo"> Tu departamento se mantiene como nuevo y no se deteriora con el tiempo, ya que se renueva  se limpia en cada reserva.</li>
+
+        </ul>
+    </div>
+
+</body>
+
+
+
+<footer>
+    <div class="contacto">
+        <div class="telefono">
+            <i class="fa-solid fa-phone"></i>
+            <p id="numero">Numero</p>
+            <p id="nombre">Nombre</p>
+            <p id="
+            matricula">Matricula</p>
+        </div>
+        <div class="horario">
+            <i class="fa-solid fa-clock"></i>
+            <p id="hora">Hora</p>
+            <p id="dia">días</p>
+        </div>
+        <div class="ubicacion">
+            <i class="fa-solid fa-location-dot"></i>
+            <p id="lugar">Lugar</p>
+            <p id="info">Info</p>
+        </div>
+    </div>
+
+
+
+    <div class="copy">
+        <p>&copy; 2025 nombre del consorcio. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+</html>
