@@ -15,69 +15,84 @@
     <header>
         <img src="img/logo.png" class="Logo" alt="Logo">
         <!-- barra de navegacion-->
-        <a href="../index/index.html">Inicio</a>
-        <a href="../empresa/empresa.html">Empresa</a>
-        <select onchange="location = this.value;">
+        <a href="../index/index.html" class="txt-activo">Inicio</a>
+        <a href="../empresa/empresa.html" class="txt">Empresa</a>
+        <select onchange="location = this.value;" class="select">
             <option value="" disabled selected hidden>Servicios</option>
             <option value="../servicios/consorcio.html">Consorcio</option>
             <option value="../servicios/alquileres.html">Alquileres</option>
         </select>
-
-        <a href="../contacto/contacto.html">Contacto</a>
+        <a href="../contacto/contacto.html" class="txt">Contacto</a>
     </header>
 
-    <div class="presentacion">
+
+
+    <section class="presentacion">
 
         <h1 id="presentacion">Administración de consorcios ...</h1>
-        <!--img-->
-    </div>
 
-    <div class="nosotros">
+    </section>
+
+
+    <section class="nosotros">
+
         <h2>Nosotros</h2>
+
         <p id="objetivo">Nuestro principal objetivo ...</p>
-    </div>
 
-    <div class="Servicios">
+    </section>
+
+    <section class="servicios">
+
         <h2>Servicios</h2>
-        <div class="servicio" onclick="abrirModal('Atención Personalizada y Visitas Periódicas')">
-            <i class="fa-solid fa-handshake"></i>
-        </div>
-        <div class="servicio" onclick="abrirModal('Liquidación y Recaudación de Expensas')">
-            <i class="fa-solid fa-building"></i>
-        </div>
-        <div class="servicio" onclick="abrirModal('Manejo de fondos')">
-            <i class="fa-solid fa-money-check-dollar"></i>
-        </div>
-        <div class="servicio" onclick="abrirModal('Mantenimiento preventivo')">
-            <i class="fa-solid fa-screwdriver-wrench"></i>
-        </div>
-        <div class="servicio" onclick="abrirModal('Asesoramiento de Arquitectos, Abogados y Contadores')">
-            <i class="fa-solid fa-message"></i>
-        </div>
-        <div class="servicio"
-            onclick="abrirModal('Control sobre la ejecución de trabajos y/o prestación de servicios de los proveedores.')">
-            <i class="fa-solid fa-person"></i>
-        </div>
-    </div>
 
-    <div id="modal-servicios" class="modal">
-        <div class="modal-content">
-            <span class="cerrar" onclick="cerrarModal()">&times;</span>
-            <h3 id="modal-nombre"></h3>
+        <div class="iconos">
+            <div class="servicio" onclick="abrirModal('Atención Personalizada y Visitas Periódicas')">
+                <i class="fa-solid fa-handshake"></i>
+            </div>
+            <div class="servicio" onclick="abrirModal('Liquidación y Recaudación de Expensas')">
+                <i class="fa-solid fa-building"></i>
+            </div>
+            <div class="servicio" onclick="abrirModal('Manejo de fondos')">
+                <i class="fa-solid fa-money-check-dollar"></i>
+            </div>
+            <div class="servicio" onclick="abrirModal('Mantenimiento preventivo')">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <div class="servicio" onclick="abrirModal('Asesoramiento de Arquitectos, Abogados y Contadores')">
+                <i class="fa-solid fa-message"></i>
+            </div>
+            <div class="servicio"
+                onclick="abrirModal('Control sobre la ejecución de trabajos y/o prestación de servicios de los proveedores.')">
+                <i class="fa-solid fa-person"></i>
+            </div>
         </div>
-    </div>
 
-    <div class="auditoria"> <i class="fa-solid fa-calculator"></i>
+        <div id="modal-servicios" class="modal">
+            <div class="modal-content">
+                <span class="cerrar" onclick="cerrarModal()">&times;</span>
+                <h3 id="modal-nombre"></h3>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="auditoria">
+
+        <i class="fa-solid fa-calculator"></i>
         <h2>Auditoría de consorcios</h2>
         <p>Permite a los propietarios del edificio auditado, conocer los detalles de la gestión del
             consorcio por parte del actual Administrador.</p>
-    </div>
+
+    </section>
 
     <div class="wpp">
         <button class="btn btn-success w-100 mt-2" onclick="pedirWhatsApp('${producto.nombre}')">
             <i class="fab fa-whatsapp"></i>
     </div>
 </body>
+
+
 <footer>
     <div class="contacto">
         <div class="telefono">
