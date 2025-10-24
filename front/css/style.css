@@ -105,13 +105,14 @@ header {
 
 .nosotros {
     text-align: center;
-    padding-top: 5%;
+    padding-top: 1%;
 }
-
-.nosotros #objetivo {
-    color: #c1c2c2;
+.nosotros #txt-nosotros{
+font-size: 3rem; 
 }
-
+.nosotros #compromiso{
+ color: #c1c2c2;
+}
 .servicios {
     text-align: center;
     padding-top: 10%;
@@ -169,4 +170,29 @@ header {
 
 .cerrar:hover {
     color: var(--negro);
+}
+/*imagen*/
+.presentacion{
+   background-image: url("../img/obelisco.jpg");
+    background-size: cover;
+    background-position: center;
+    background-position: center top;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 120 px 30 px;
+    position: relative;
+    min-height: 500px; /** mas grande*/
+}
+/*imagen socura*/
+.presentacion::before{
+    content:"";
+    position:absolute;
+    top:0; left:0;right:0;bottom:0;
+    background-color: rgba(0, 0, 0, 0.5); /*oscurece fondo*/
+}
+/*texto sobre imagen oscura*/
+.presentacion h1, .presentacion h2{
+    position: relative;
+    z-index: 1;
 }
