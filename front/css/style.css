@@ -196,3 +196,69 @@ font-size: 3rem;
     position: relative;
     z-index: 1;
 }
+
+/* estilos para el footer donde se ven los datos de TELEFONO HORARIO Y DIR.OFICINA*/
+/* Estilos para la sección completa */
+.contact-info {
+    display: flex; /* Para poner los bloques uno al lado del otro */
+    justify-content: space-around; /* Distribuye el espacio entre los bloques */
+    align-items: flex-start; /* Alinea los elementos al inicio (arriba) */
+    background-color: #000000; /* Fondo negro oscuro */
+    color: #ffffff; /* Color de texto predeterminado: blanco */
+    padding: 40px 20px;
+    font-family: Arial, sans-serif; /* Puedes cambiar la fuente */
+    border-top: 5px solid #00c6ff; /* Simula la franja azul superior */
+}
+
+/* Estilos para cada bloque de información (teléfono, horario, oficinas) */
+.info-block {
+    text-align: center; /* Centra el texto dentro de cada bloque */
+    flex: 1; /* Permite que el bloque crezca y ocupe espacio equitativamente */
+    padding: 0 15px;
+    max-width: 300px; /* Limita el ancho de cada bloque */
+}
+
+/* Estilos para los iconos (teléfono, reloj, mapa) */
+.info-block i {
+    color: #00ff00; /* Color verde brillante para los iconos */
+    font-size: 30px;
+    margin-bottom: 10px;
+    display: block; /* Asegura que el icono esté en su propia línea para centrarlo */
+}
+
+/* Estilos para los títulos (Teléfono, Horario, Oficinas) */
+.info-block h3 {
+    color: #ffffff; /* Título en blanco */
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Estilos para los párrafos de información */
+.info-block p {
+    color: #cccccc; /* Un gris claro para el texto secundario */
+    font-size: 14px;
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+/* Estilo específico para resaltar el número de teléfono/datos principales si es necesario */
+.info-block p:first-of-type {
+    color: #ffffff; /* El número de teléfono más destacado en blanco */
+}
+
+/* Media Query para hacer la vista responsiva en dispositivos pequeños (opcional) */
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column; /* Apila los bloques verticalmente en móviles */
+        align-items: center;
+        padding: 30px 10px;
+    }
+
+    .info-block {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+}
