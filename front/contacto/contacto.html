@@ -12,73 +12,86 @@
 
 <body>
     <header>
-        <!-- barra de navegacion-->
-        <a href="../index/index.html" class="txt-activo">Inicio</a>
+        <!-- barra de navegacion (CORREGIDA: Ahora "Contacto" es .txt-activo) -->
+        <a href="../index/index.html" class="txt">Inicio</a>
         <a href="../empresa/empresa.html" class="txt">Empresa</a>
         <select onchange="location = this.value;" class="select">
             <option value="" disabled selected hidden>Servicios</option>
             <option value="../servicios/consorcio.html">Consorcio</option>
             <option value="../servicios/alquileres.html">Alquileres</option>
         </select>
-        <a href="../contacto/contacto.html" class="txt">Contacto</a>
+        <a href="../contacto/contacto.html" class="txt-activo">Contacto</a> <!-- ACTIVO -->
     </header>
 
+    <!-- 
+        NUEVO CONTENEDOR PRINCIPAL
+        Añadimos un estilo en línea (o una clase en style.css) para forzar 
+        el contenido a empezar debajo del fixed header. 
+        Calculando que el header tiene aproximadamente 70px de altura, usamos 90px para margen.
+    -->
+    <div class="main-content" style="padding-top: 90px;">
+        
+        <!-- Tu HTML anterior comenzaba aquí -->
+        
+        <!-- Se eliminó el <a> de contacto repetido -->
+        
+        <h1 id="contacto-titulo" style="text-align: center; margin-bottom: 20px;">Contacto</h1>
+        
+        <div class="formulario">
 
-    <a href="../contacto/contacto.html">Contacto</a>
-    </header>
+            <!-- formulario de presupuesto -->
+            <!-- Se eliminó el h1 repetido -->
+            
+            <!-- Para el envío del formulario:-->
+            <!-- 1. registrarse en FORMSPREE.io , a ese email se enviarán los forms -->
+            <!-- 2. en el sitio crear un nuevo proyecto y un nuevo formulario -->
+            <!-- 3. copiar la URL en action
+                 action="https://formspree.io/f/tu-codigo-unico" -->
+        
+            <form class="datos" action="https://formspree.io/f/movprlvp" method="POST">
 
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required><br>
+                <input type="email" id="email" name="email" placeholder="Email" required><br>
+                <input type="tel" id="telefono" name="telefono" placeholder="Teléfono"><br>
+                <input type="text" id="direccion" name="direccion" placeholder="Dirección"><br>
+                <input type="number" id="cantDep" name="cantDep" placeholder="Cantidad de departamentos"><br>
+                <input type="number" id="cantCo" name="cantCo" placeholder="Cantidad de cocheras"><br>
+                <input type="text" id="amenities" name="amenities" placeholder="Amenities"><br>
 
-    <h1 id="contacto-titulo">Contacto</h1>
-    <div class="formulario">
+                <div class="encargado">
+                    <p id="encargado-txt">Encargado</p>
+                    <input type="radio" id="encargadoSi" name="encargado" value="Si"> Si
+                    <input type="radio" id="encargadoNo" name="encargado" value="No" checked> No
+                </div>
+                <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea><br>
 
-        <!-- formulario de presupuesto -->
-        <h1 id="contacto-titulo">Contacto</h1>
-<div class="formulario">
+                <button type="submit" id="enviar-btn">Enviar</button>
+            </form>
+        </div>
 
-        <!-- Para el envío del formulario:-->
-        <!-- 1. registrarse en FORMSPREE.io , a ese email se enviarán los forms -->
-        <!-- 2. en el sitio crear un nuevo proyecto y un nuevo formulario -->
-        <!-- 3. copiar la URL en action
-         action="https://formspree.io/f/tu-codigo-unico" -->
-    
-        <form class="datos" action="https://formspree.io/f/movprlvp" method="POST">
+        <!-- boton de whatsapp-->
+        <div class="wpp">
+            <!-- Nota: La variable ${producto.nombre} es incorrecta en HTML estático. 
+                Deberías usar una cadena de texto o una variable JS válida si usas un script. 
+                Dejo la función original, asumiendo que el script JS la maneja. -->
+            <button class="btn btn-success w-100 mt-2" onclick="pedirWhatsApp('${producto.nombre}')">
+                <i class="fab fa-whatsapp"></i>
+            </button>
+        </div>
 
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required><br>
-            <input type="email" id="email" name="email" placeholder="Email" required><br>
-            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono"><br>
-            <input type="text" id="direccion" name="direccion" placeholder="Dirección"><br>
-            <input type="number" id="cantDep" name="cantDep" placeholder="Cantidad de departamentos"><br>
-            <input type="number" id="cantCo" name="cantCo" placeholder="Cantidad de cocheras"><br>
-            <input type="text" id="amenities" name="amenities" placeholder="Amenities"><br>
+        <!-- mapa de google -->
+        <div class="ubicacion" style="padding-bottom: 50px; text-align: center;">
+            <i class="fa-solid fa-location-dot"></i>
+            <p id="lugar">Dirección: Avenida Corrientes 1234, Capital Federal.</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.005613642029!2d-58.386716888608575!3d-34.60401955740141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac59a5bd441%3A0x1408e2f06974627!2sAv.%20Corrientes%201234%2C%20C1043AAZ%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1761349792566!5m2!1sen!2sar"
+                width="100%" height="300" style="border:0; max-width: 600px; border-radius: 8px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-            <div class="encargado">
-                <p id="encargado-txt">Encargado</p>
-                <input type="radio" id="encargadoSi" name="encargado" value="Si"> Si
-                <input type="radio" id="encargadoNo" name="encargado" value="No" checked> No
-            </div>
-            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea><br>
-
-            <button type="submit" id="enviar-btn">Enviar</button>
-        </form>
-    </div>
-
-    <!-- boton de whatsapp-->
-    <div class="wpp">
-        <button class="btn btn-success w-100 mt-2" onclick="pedirWhatsApp('${producto.nombre}')">
-            <i class="fab fa-whatsapp"></i>
-    </div>
-
-    <!-- mapa de google -->
-    <div class="ubicacion">
-        <i class="fa-solid fa-location-dot"></i>
-        <p id="lugar">Dirección: Avenida Corrientes 1234, Capital Federal.</p>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.005613642029!2d-58.386716888608575!3d-34.60401955740141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac59a5bd441%3A0x1408e2f06974627!2sAv.%20Corrientes%201234%2C%20C1043AAZ%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1761349792566!5m2!1sen!2sar"
-            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-        <p id="info">Info</p>
-    </div>
+            <p id="info">Info</p>
+        </div>
+        
+    </div> <!-- Fin del main-content -->
 
     <!--aqui el nuevo footer-->
     <footer>
@@ -113,4 +126,5 @@
     </footer>
     <!-- fin del nuevo footer-->
 
+</body>
 </html>

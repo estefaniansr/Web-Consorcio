@@ -15,9 +15,9 @@
 <body>
      <header>
          <!-- barra de navegacion-->
-        <a href="../index/index.html" class="txt-activo">Inicio</a>
+        <a href="../index/index.html" class="txt">Inicio</a>
         <a href="../empresa/empresa.html" class="txt">Empresa</a>
-        <select onchange="location = this.value;" class="select">
+        <select onchange="location = this.value;" class="txt-activo">
             <option value="" disabled selected hidden>Servicios</option>
             <option value="../servicios/consorcio.html">Consorcio</option>
             <option value="../servicios/alquileres.html">Alquileres</option>
@@ -25,68 +25,88 @@
         <a href="../contacto/contacto.html" class="txt">Contacto</a>
     </header>
 
-    <div class="consorcio">
+    <div class="main-content" style="padding-top: 90px;">
+        
+        <h1 id="consorcio-titulo" style="text-align: center; margin-bottom: 20px;">Administración Integral de Consorcios</h1>
 
-        <h1 id="consorcio-titulo">Consorcio</h1>
-
-        <div class="servicio"
-            onclick="abrirModal('Atención Personalizada y Visitas Periódicas', 'Nos adecuamos a personas y consorcios con prioridad a su disponibilidad. Hacemos visitas frecuentes a cada consorcio.')">
-            <i class="fa-solid fa-handshake"></i>
-        </div>
-        <div class="servicio"
-            onclick="abrirModal('Liquidación y Recaudación de Expensas','Resumen de gastos, rendición de cuentas, confección de liquidación de expensas y recibos de pago. Seguimiento de deudores.')">
-            <i class="fa-solid fa-building"></i>
-        </div>
-        <div class="servicio"
-            onclick="abrirModal('Manejo de fondos','Liquidación de Sueldos y Jornales, liquidaciones impositivas. Gestión clara y transparente de los fondos y cuentas bancarias del consorcio.')">
-            <i class="fa-solid fa-money-check-dollar"></i>
-        </div>
-        <div class="servicio"
-            onclick="abrirModal('Mantenimiento preventivo','Mantenimiento de la propiedad de una manera preventiva. Proveedores, solicitud depresupuestos, contratación y control de los servicios.')">
-            <i class="fa-solid fa-screwdriver-wrench"></i>
-        </div>
-        <div class="servicio"
-            onclick="abrirModal('Asesoramiento de Arquitectos, Abogados y Contadores','Contamos con un equipo de expertos para la resolución de problemas.')">
-            <i class="fa-solid fa-message"></i>
-        </div>
-        <div class="servicio"
-            onclick="abrirModal('Control sobre la ejecución de trabajos y/o prestación de servicios de los proveedores.', ' A lo largo de los años hemos formado un equipo eficiente y eficaz para resolver todo tipo de situaciones.')">
-            <i class="fa-solid fa-person"></i>
+        <div style="max-width: 800px; margin: 0 auto 40px; text-align: center; padding: 0 20px;">
+            <p style="font-size: 1.1rem; line-height: 1.6; color: var(--grisBlanco);">
+                Raíces Nasrala ofrece una gestión moderna y transparente, enfocada en la preservación del valor de su propiedad y la armonía comunitaria. Nuestro servicio integral garantiza el cumplimiento legal, la eficiencia financiera y un mantenimiento proactivo, brindando tranquilidad a cada propietario.
+            </p>
         </div>
 
-    </div>
 
-    <div id="modal-consorcio" class="modal">
-        <div class="modal-content">
-            <span class="cerrar" onclick="cerrarModal()">&times;</span>
-            <h3 id="modal-nombre"></h3>
-            <p id="modal-desc"></p>
+        <div class="consorcio">
+            <!-- Bloques de servicio mejorados y con mejor descripción para el modal -->
+            <div class="servicio"
+                onclick="abrirModal('Atención Personalizada y Visitas Periódicas', 'Priorizamos la cercanía. Ofrecemos atención directa y nos adecuamos a la disponibilidad de cada consorcista, realizando visitas frecuentes y programadas para supervisar el buen funcionamiento del edificio.')">
+                <i class="fa-solid fa-handshake"></i>
+            </div>
+            <div class="servicio"
+                onclick="abrirModal('Liquidación y Recaudación de Expensas Claras','Garantizamos la máxima transparencia con resúmenes de gastos detallados, rendición de cuentas accesible online, confección precisa de expensas y recibos de pago. Incluye gestión proactiva de seguimiento de deudores.')">
+                <i class="fa-solid fa-building"></i>
+            </div>
+            <div class="servicio"
+                onclick="abrirModal('Administración Fiduciaria de Fondos','Manejo ético y transparente de las finanzas del consorcio. Realizamos la liquidación de sueldos y jornales, liquidaciones impositivas y la gestión clara de los fondos en cuentas bancarias exclusivas del consorcio.')">
+                <i class="fa-solid fa-money-check-dollar"></i>
+            </div>
+            <div class="servicio"
+                onclick="abrirModal('Mantenimiento Proactivo y Preventivo','Nos enfocamos en la conservación de la infraestructura. Implementamos planes de mantenimiento preventivo, solicitamos presupuestos competitivos, contratamos y supervisamos la ejecución de servicios y proveedores.')">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <div class="servicio"
+                onclick="abrirModal('Asesoramiento Profesional Integral','Ponemos a disposición un equipo multidisciplinario de arquitectos, abogados y contadores para abordar cualquier conflicto legal, estructural o contable que pueda surgir, garantizando una resolución rápida y eficaz.')">
+                <i class="fa-solid fa-message"></i>
+            </div>
+            <div class="servicio"
+                onclick="abrirModal('Control y Supervisión de Proveedores', 'A lo largo de los años hemos seleccionado y formado un equipo de proveedores de alta eficiencia y eficacia. Aseguramos el estricto control sobre la ejecución de los trabajos contratados y la calidad de los servicios prestados.')">
+                <i class="fa-solid fa-person"></i>
+            </div>
+
         </div>
-    </div>
 
-    <div class="wpp">
-        <button class="btn btn-success w-100 mt-2" onclick="pedirWhatsApp('${producto.nombre}')">
-            <i class="fab fa-whatsapp"></i>
-    </div>
-
-    <div class="auditoria">
-
-        <div class="auditoria-consorcios">
-            <h2>Auditoría de consorcios</h2>
-            <p>Permite a los propietarios del edificio auditado...</p>
+        <!-- MODAL (fuera del div principal para mantener la estructura) -->
+        <div id="modal-consorcio" class="modal">
+            <div class="modal-content">
+                <span class="cerrar" onclick="cerrarModal()">&times;</span>
+                <h3 id="modal-nombre"></h3>
+                <p id="modal-desc"></p>
+            </div>
         </div>
 
-        <div class="consiste">
-            <h3>En que consiste?</h3>
-            <p>explicacion</p>
+        <!-- boton de whatsapp-->
+        <div class="wpp">
+            <button class="btn btn-success w-100 mt-2" onclick="pedirWhatsApp('${producto.nombre}')">
+                <i class="fab fa-whatsapp"></i>
         </div>
-        <div class="utilidad">
-            <h3>utilidad</h3>
-            <p>explicacion</p>
-        </div>
-    </div>
 
-</body>
+        <!-- SECCIÓN AUDITORÍA CON TEXTOS PROFESIONALES -->
+        <div class="auditoria" style="max-width: 800px; margin: 40px auto 50px; padding: 0 20px;">
+
+            <div class="auditoria-consorcios">
+                <h2 style="font-size: 1.8rem; margin-bottom: 15px; border-bottom: 2px solid var(--porcelana);">Servicio de Auditoría Externa de Consorcios</h2>
+                <p style="font-size: 1rem; line-height: 1.6;">
+                    Este servicio especializado está diseñado para ofrecer a los propietarios una visión objetiva e independiente de la gestión administrativa y financiera de su edificio, realizada por el actual administrador.
+                </p>
+            </div>
+
+            <div class="consiste" style="margin-top: 30px;">
+                <h3 style="font-size: 1.4rem; margin-bottom: 10px;">En qué consiste?</h3>
+                <p style="line-height: 1.6;">
+                    Consiste en un análisis exhaustivo de la documentación contable y administrativa, incluyendo: revisión de liquidaciones de expensas, contratos con proveedores, cumplimiento de obligaciones laborales, conciliaciones bancarias, y verificación del estado de las cuentas del consorcio durante un período determinado.
+                </p>
+            </div>
+            <div class="utilidad" style="margin-top: 30px;">
+                <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Utilidad para el Propietario</h3>
+                <p style="line-height: 1.6;">
+                    Obtenga claridad absoluta. La auditoría brinda la tranquilidad de conocer el detalle del manejo de fondos, identifica posibles inconsistencias o áreas de mejora, y proporciona herramientas para la toma de decisiones informadas en la próxima asamblea, fortaleciendo la confianza en la gestión de su patrimonio.
+                </p>
+            </div>
+        </div>
+        <!-- FIN SECCIÓN AUDITORÍA -->
+
+    </div> <!-- Fin del main-content -->
+
 
 <!--aqui el nuevo footer-->
     <footer>
@@ -118,4 +138,5 @@
 </footer>
 <!-- fin del nuevo footer-->
 
+</body>
 </html>

@@ -14,10 +14,11 @@
 
 <body>
     <header>
-         <!-- barra de navegacion-->
-        <a href="../index/index.html" class="txt-activo">Inicio</a>
+        <!-- barra de navegacion -->
+        <a href="../index/index.html" class="txt">Inicio</a>
         <a href="../empresa/empresa.html" class="txt">Empresa</a>
-        <select onchange="location = this.value;" class="select">
+        <!-- CORREGIDO: El select DEBE usar la clase .select para mantener el estilo consistente -->
+        <select onchange="location = this.value;" class="select txt-activo">
             <option value="" disabled selected hidden>Servicios</option>
             <option value="../servicios/consorcio.html">Consorcio</option>
             <option value="../servicios/alquileres.html">Alquileres</option>
@@ -25,74 +26,91 @@
         <a href="../contacto/contacto.html" class="txt">Contacto</a>
     </header>
 
-    <div class="alquileres">
+    <!-- 
+        NUEVO CONTENEDOR PRINCIPAL: 
+        Se añade padding-top para evitar que el header tape el contenido.
+    -->
+    <div class="main-content" style="padding-top: 90px;">
 
-        <h1 id="alquieres-titulo">Alquileres</h1>
+        <h1 id="alquieres-titulo" style="text-align: center; margin-bottom: 20px;">Gestión de Alquileres Temporarios</h1>
 
-        <h2 id="ofrecemos">Ofrecemos un servicio completo</h2>
-        <p id="descripcion">El servicio integral incluye la evaluación del espacio, ..</p>
-
-        <div class="servicio" onclick="abrirModal('EQUIPÁ TU PROPIEDAD', 'Para alquilar temporariamente')">
-            <i class="fa-solid fa-couch"></i>
-        </div>
-        <div class="servicio" onclick="abrirModal('PUBLICACIÓN', 'Con la ayuda de nuestro equipo de fotógrafo')">
-            <i class="fa-solid fa-camera"></i>
-        </div>
-        <div class="servicio"
-            onclick="abrirModal('ATENCIÓN A HUÉSPEDES', 'Nos encargamos de realizar el chek in y check out...')">
-            <i class="fa-solid fa-handshake"></i>
-        </div>
-        <div class="servicio"
-            onclick="abrirModal('REPOSICIÓN Y LIMPIEZA', 'Nos encargamos de la limpieza en cada recambio de...')">
-            <i class="fa-solid fa-paint-roller"></i>
-        </div>
-        <div class="servicio" onclick="abrirModal('MANTENIMIENTO', 'Estamos en contacto constante con los huéspedes')">
-            <i class="fa-solid fa-message"></i>
-        </div>
-        <div class="servicio"
-            onclick="abrirModal('RENDICIÓN DE CUENTAS', 'Mensualmente nos encargamos de llevar lo recaudado')">
-            <i class="fa-solid fa-calculator"></i>
+        <div style="max-width: 800px; margin: 0 auto 40px; text-align: center; padding: 0 20px;">
+            <h2 id="ofrecemos" style="font-size: 1.5rem; margin-bottom: 10px;">Maximice su Rentabilidad sin Esfuerzo</h2>
+            <p id="descripcion" style="font-size: 1.1rem; line-height: 1.6; color: var(--grisBlanco);">
+                Ofrecemos un servicio integral de administración de alquileres temporarios que cubre cada etapa: desde la preparación inicial de la propiedad hasta la rendición mensual de cuentas. Confíe en nuestro equipo para transformar su inmueble en una fuente de ingresos optimizada, sin que tenga que ocuparse de la operativa diaria.
+            </p>
         </div>
 
 
-    </div>
-
-    <div id="modal-consorcio" class="modal">
-        <div class="modal-content">
-            <span class="cerrar" onclick="cerrarModal()">&times;</span>
-            <h3 id="modal-nombre"></h3>
-            <p id="modal-desc"></p>
+        <div class="alquileres">
+            <!-- Bloques de servicio mejorados y con mejor descripción para el modal -->
+            <div class="servicio"
+                onclick="abrirModal('Equipamiento Estratégico de su Propiedad', 'Asesoramiento profesional para equipar y ambientar su propiedad, elevando el estándar y la tarifa de alquiler temporario. Esto incluye la provisión de mobiliario y ropa blanca clave para una experiencia premium.')">
+                <i class="fa-solid fa-couch"></i>
+            </div>
+            <div class="servicio"
+                onclick="abrirModal('Publicación y Marketing Profesional', 'Con la ayuda de nuestro equipo de fotógrafos profesionales, creamos un perfil atractivo de su propiedad y la posicionamos en las principales plataformas de alquileres a nivel mundial para garantizar la máxima ocupación.')">
+                <i class="fa-solid fa-camera"></i>
+            </div>
+            <div class="servicio"
+                onclick="abrirModal('Atención Premium a Huéspedes (Check-in/Check-out)', 'Nos encargamos de todo el ciclo de atención: desde la comunicación previa, la cálida recepción (check-in) y la asistencia durante su estadía, hasta la despedida (check-out) y la verificación del estado del inmueble.')">
+                <i class="fa-solid fa-handshake"></i>
+            </div>
+            <div class="servicio"
+                onclick="abrirModal('Servicio de Limpieza y Reposición de Amenities', 'Nos encargamos de la limpieza profunda en cada recambio de huésped, asegurando estándares hoteleros. Además, gestionamos la reposición de amenities, ropa de cama y elementos básicos, manteniendo su propiedad impecable.')">
+                <i class="fa-solid fa-paint-roller"></i>
+            </div>
+            <div class="servicio"
+                onclick="abrirModal('Mantenimiento Proactivo y Asistencia Técnica', 'Gestionamos todas las reparaciones menores y el mantenimiento preventivo del inmueble. Estamos en contacto constante con los huéspedes para resolver cualquier inconveniente técnico o logístico de manera inmediata.')">
+                <i class="fa-solid fa-message"></i>
+            </div>
+            <div class="servicio"
+                onclick="abrirModal('Rendición de Cuentas Transparente y Mensual', 'Mensualmente nos encargamos de liquidar y transferirle lo recaudado, adjuntando un detalle exhaustivo de ingresos, egresos y el estado de ocupación, garantizando total claridad financiera.')">
+                <i class="fa-solid fa-calculator"></i>
+            </div>
         </div>
-    </div>
 
-    <div class="wpp">
-        <button class="btn btn-success w-100 mt-2" onclick="pedirWhatsApp('${producto.nombre}')">
-            <i class="fab fa-whatsapp"></i>
-    </div>
+        <!-- MODAL (fuera del div principal para mantener la estructura) -->
+        <div id="modal-consorcio" class="modal">
+            <div class="modal-content">
+                <span class="cerrar" onclick="cerrarModal()">&times;</span>
+                <h3 id="modal-nombre"></h3>
+                <p id="modal-desc"></p>
+            </div>
+        </div>
 
-    <div class="rentabilidad">
-        <i class="fa-solid fa-dollar-sign"></i>
-        <h2 id="rentabilidad-titulo">Rentabilidad</h2>
-        <ul>
-            <li id="MayorRentabilidad">Mayor rentabilidad</li>
-            <li id="Duplicar">Duplica la rentabilidad de un alquiler normal</li>
-            <li id="precios">Actualización de precios</li>
-            <li id="precioAlquiler">El precio del alquiler lo fija el propietario y lo actualiza cuando quiere.</li>
-        </ul>
-    </div>
-    <div class="tiempo">
-        <i class="fa-solid fa-clock"></i>
-        <h2 id="tiempo-titulo">Más tiempo para vos</h2>
-        <ul>
-            <li id="preocupar"> No tenés que ocuparte de nada, nuestro servicio lo cubre todo</li>
-            <li id="nuestroServicio"> Con nuestro servicio mantenés ocupado el departamento y ganás más del doble  que un alquiler tradicional.</li>
-            <li id="MantieneNuevo"> Tu departamento se mantiene como nuevo y no se deteriora con el tiempo, ya que se renueva  se limpia en cada reserva.</li>
+        <!-- boton de whatsapp-->
+        <div class="wpp">
+            <button class="btn btn-success w-100 mt-2" onclick="pedirWhatsApp('${producto.nombre}')">
+                <i class="fab fa-whatsapp"></i>
+        </div>
 
-        </ul>
-    </div>
+        <!-- SECCIÓN RENTABILIDAD Y TIEMPO CON TEXTOS MEJORADOS -->
+        <div style="max-width: 800px; margin: 40px auto 50px; padding: 0 20px;">
+            <div class="rentabilidad" style="margin-bottom: 40px;">
+                <i class="fa-solid fa-dollar-sign" style="font-size: 2rem; color: var(--porcelana); display: block; text-align: center; margin-bottom: 10px;"></i>
+                <h2 id="rentabilidad-titulo" style="text-align: center; font-size: 1.8rem; border-bottom: 2px solid var(--porcelana); padding-bottom: 10px; margin-bottom: 20px;">Rentabilidad Superior Garantizada</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li id="MayorRentabilidad" style="margin-bottom: 10px; line-height: 1.6;"><i class="fa-solid fa-check-circle" style="color: #4CAF50; margin-right: 10px;"></i>Mayor Rentabilidad: Nuestro modelo de gestión optimiza las tarifas dinámicas, asegurando ingresos superiores al alquiler tradicional.</li>
+                    <li id="Duplicar" style="margin-bottom: 10px; line-height: 1.6;"><i class="fa-solid fa-check-circle" style="color: #4CAF50; margin-right: 10px;"></i>Duplique la Rentabilidad: Muchos de nuestros clientes logran duplicar el rendimiento financiero que obtendrían con un contrato de alquiler convencional a largo plazo.</li>
+                    <li id="precios" style="margin-bottom: 10px; line-height: 1.6;"><i class="fa-solid fa-check-circle" style="color: #4CAF50; margin-right: 10px;"></i>Actualización de Precios Diaria: Los precios se ajustan constantemente según la demanda y el mercado, asegurando que su inmueble siempre se alquile al mejor valor.</li>
+                    <li id="precioAlquiler" style="margin-bottom: 10px; line-height: 1.6;"><i class="fa-solid fa-check-circle" style="color: #4CAF50; margin-right: 10px;"></i>Control Propietario: Usted mantiene la potestad de fijar el precio mínimo de alquiler y decide cuándo desea actualizarlo, con nuestro asesoramiento profesional.</li>
+                </ul>
+            </div>
+            
+            <div class="tiempo">
+                <i class="fa-solid fa-clock" style="font-size: 2rem; color: var(--porcelana); display: block; text-align: center; margin-bottom: 10px;"></i>
+                <h2 id="tiempo-titulo" style="text-align: center; font-size: 1.8rem; border-bottom: 2px solid var(--porcelana); padding-bottom: 10px; margin-bottom: 20px;">Recupere su Tiempo y Tranquilidad</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li id="preocupar" style="margin-bottom: 10px; line-height: 1.6;"><i class="fa-solid fa-shield-alt" style="color: #4CAF50; margin-right: 10px;"></i>Cero Preocupaciones: Nuestro servicio "llave en mano" cubre toda la gestión, liberándolo de la coordinación de huéspedes, limpieza y mantenimiento.</li>
+                    <li id="nuestroServicio" style="margin-bottom: 10px; line-height: 1.6;"><i class="fa-solid fa-shield-alt" style="color: #4CAF50; margin-right: 10px;"></i>Ocupación Continua: Nos enfocamos en mantener el departamento ocupado y maximizar su potencial de ganancia, superando el rendimiento de un alquiler tradicional.</li>
+                    <li id="MantieneNuevo" style="margin-bottom: 10px; line-height: 1.6;"><i class="fa-solid fa-shield-alt" style="color: #4CAF50; margin-right: 10px;"></i>Conservación Inmueble: Su propiedad se mantiene en condiciones óptimas. La limpieza y el control riguroso en cada recambio aseguran que no se deteriore con el paso del tiempo.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- FIN SECCIÓN RENTABILIDAD Y TIEMPO -->
 
-</body>
-
+    </div> <!-- Fin del main-content -->
 
 
 <!--aqui el nuevo footer-->
@@ -124,5 +142,7 @@
     </div>
 </footer>
 <!-- fin del nuevo footer-->
+
+</body>
 
 </html>
