@@ -90,7 +90,7 @@ header {
     color: white;
     text-align: center;
     min-height: 70vh;
-    padding: 180px 30px 50px 30px;
+    padding: 100px 30px 50px 50px;
     position: relative;
 }
 
@@ -189,14 +189,13 @@ header {
 .presentacion {
     background-image: url("../img/obelisco.jpg");
     background-size: cover;
-    background-position: center;
     background-position: center top;
     background-repeat: no-repeat;
     color: white;
     text-align: center;
     padding: 120 px 30 px;
     position: relative;
-    min-height: 500px;
+    min-height: 400px;
     /** mas grande*/
 }
 
@@ -252,7 +251,7 @@ header {
 
 /* Estilos para los iconos (teléfono, reloj, mapa) */
 .info-block i {
-    color: #00ff00;
+    color: #06a9db;
     /* Color verde brillante para los iconos */
     font-size: 30px;
     margin-bottom: 10px;
@@ -286,6 +285,107 @@ header {
     /* El número de teléfono más destacado en blanco */
 }
 
+    .info-block {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+.intro {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  z-index:0;
+  margin-top: 120px;
+}
+
+.intro-img {
+  width: 100%;
+  height: 70vh; /* Se adapta al tamaño de pantalla */
+  min-height: 400px; /* No se achica demasiado */
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(55%); /* un poco más oscuro para contraste */
+  transition: transform 4s ease; /* animación sutil */
+}
+
+.intro:hover .intro-img {
+  transform: scale(1.10); /* efecto leve de zoom al pasar el mouse */
+}
+
+/*imagen socura*/
+.intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(48, 47, 47, 0.5);
+    z-index: 1;
+    /*oscurece fondo*/
+}
+.intro h1,
+.intro p {
+    position: relative;
+    z-index: 1;
+}
+
+/* Texto centrado sobre la imagen */
+.intro-text {
+  position: absolute;
+  top: 50%; /* antes 50%, ahora un poco más abajo */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  width: 80%;
+  max-width: 900px;
+  z-index: 2;
+}
+
+.intro-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.intro-text p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--grisBlanco);
+}
+.btn {
+  display: inline-block;
+  background-color: #007bff; /* azul profesional */
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: #0056b3; /* azul más oscuro */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+.cta {
+  text-align: center;
+  color:#135eb4;
+  background: linear-gradient(135deg, rgba(0,123,255,0.1), rgba(0,0,0,0.1)); /* opcional, da un toque moderno */
+}
+
+.cta .btn {
+  display: inline-block;
+  margin-top: 15px;
+}
+
 /* Media Query para hacer la vista responsiva en dispositivos pequeños (opcional) */
 @media (max-width: 768px) {
     .contact-info {
@@ -295,8 +395,5 @@ header {
         padding: 30px 10px;
     }
 
-    .info-block {
-        margin-bottom: 30px;
-        width: 100%;
-    }
+
 }
