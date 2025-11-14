@@ -54,7 +54,31 @@ header {
     border: none;
     background: none;
 }
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: row;      /* mantener horizontal */
+        justify-content: flex-start; /* alinear a la izquierda */
+        overflow-x: auto;         /* permite scrollear si no caben */
+        padding: 8px 10px;        /* más compacto */
+        font-size: 0.85rem;       /* texto más pequeño */
+        gap: 10px;                /* separación entre links */
+    }
 
+    .txt, .txt-activo, .select {
+        flex: 0 0 auto;           /* que no se reduzcan demasiado */
+        margin: 0;                /* sin margen extra */
+        padding: 4px 8px;         /* padding compacto */
+        font-size: 0.85rem;
+    }
+
+    .select {
+        width: auto;              /* no ocupa todo el ancho */
+    }
+
+    header::-webkit-scrollbar {
+        height: 4px;              /* scrollbar fino */
+    }
+}
 .txt {
     color: #797d7d;
 }
@@ -101,10 +125,12 @@ header {
     .presentacion {
         min-height: 80vh;
         /* Aumentamos un poco la altura para que la imagen se vea mejor */
-        padding: 120px 20px 50px 20px;
+        padding: 80px 20px;;
         /* Reducimos el padding superior para que el texto aparezca antes */
         background-attachment: scroll;
         /* Desactivamos el efecto 'fixed' en móviles para evitar problemas de rendimiento y visualización */
+         min-height: 60vh;
+           background-position: center top; /* que se vea la parte importante */
     }
 
     /* Opcional: Si el texto sigue quedando muy chico/grande, se puede ajustar */
@@ -352,6 +378,35 @@ header {
   font-size: 1.4rem;
   line-height: 1.6;
   color: var(--grisBlanco);
+}
+@media screen and (max-width: 600px) {
+  .intro-img {
+      height: 50vh;           /* altura más pequeña para móviles */
+      min-height: 250px;      
+      object-fit: cover;      /* mantiene el efecto cover */
+      object-position: center top; /* evita cortar la parte importante */
+  }
+
+  .intro-text {
+      position: absolute;     /* sigue sobre la imagen */
+      top: 50%;               /* centrado vertical */
+      left: 50%;              /* centrado horizontal */
+      transform: translate(-50%, -50%);
+      width: 90%;             /* ocupa casi todo el ancho */
+      max-width: 350px;       /* ancho máximo en móviles */
+      text-align: center;
+      padding: 0 10px;
+  }
+
+  .intro-text h1 {
+      font-size: 1.5rem;      /* más pequeño para móvil */
+      line-height: 1.2;
+  }
+
+  .intro-text p {
+      font-size: 0.9rem;      /* más legible en móvil */
+      line-height: 1.3;
+  }
 }
 .btn {
   display: inline-block;
