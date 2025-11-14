@@ -48,37 +48,61 @@
             <!-- 3. copiar la URL en action
                  action="https://formspree.io/f/tu-codigo-unico" -->
         
-            <form class="datos" action="https://formspree.io/f/movprlvp" method="POST">
+            <form class="datos" action="https://formspree.io/f/xrbrearp" method="POST">
+                <div>
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" required>
+    </div>
 
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required><br>
-                <input type="email" id="email" name="email" placeholder="Email" required><br>
-                <input type="tel" id="telefono" name="telefono" placeholder="Teléfono"><br>
-                <input type="text" id="direccion" name="direccion" placeholder="Dirección"><br>
-                <input type="number" id="cantDep" name="cantDep" placeholder="Cantidad de departamentos"><br>
-                <input type="number" id="cantCo" name="cantCo" placeholder="Cantidad de cocheras"><br>
-                <input type="text" id="amenities" name="amenities" placeholder="Amenities"><br>
+    <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+    </div>
 
-                <div class="encargado">
-                    <p id="encargado-txt">Encargado</p>
-                    <input type="radio" id="encargadoSi" name="encargado" value="Si"> Si
-                    <input type="radio" id="encargadoNo" name="encargado" value="No" checked> No
-                </div>
-                <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea><br>
+    <div>
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono">
+    </div>
 
-                <button type="submit" id="enviar-btn">Enviar</button>
-            </form>
-        </div>
+    <div>
+        <label for="direccion">Dirección</label>
+        <input type="text" id="direccion" name="direccion">
+    </div>
+
+    <div>
+        <label for="cantDep">Cantidad de departamentos</label>
+        <input type="number" id="cantDep" name="cantDep">
+    </div>
+
+    <div>
+        <label for="cantCo">Cantidad de cocheras</label>
+        <input type="number" id="cantCo" name="cantCo">
+    </div>
+
+    <div>
+        <label for="amenities">Amenities</label>
+        <input type="text" id="amenities" name="amenities">
+    </div>
+
+    <div class="encargado">
+        <p id="encargado-txt">Encargado:</p>
+        <label><input type="radio" name="encargado" value="Si"> Sí</label>
+        <label><input type="radio" name="encargado" value="No" checked> No</label>
+    </div>
+
+    <div>
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+    </div>
+
+    <button type="submit" id="enviar-btn">Enviar</button>
 
         <!-- boton de whatsapp-->
-        <div class="wpp">
-            <!-- Nota: La variable ${producto.nombre} es incorrecta en HTML estático. 
-                Deberías usar una cadena de texto o una variable JS válida si usas un script. 
-                Dejo la función original, asumiendo que el script JS la maneja. -->
-            <button class="btn btn-success w-100 mt-2" onclick="pedirWhatsApp('${producto.nombre}')">
-                <i class="fab fa-whatsapp"></i>
-            </button>
-        </div>
-
+        
+           <button class="btn-wpp-fixed" onclick="pedirWhatsApp('WhatsApp')">
+    <i class="fab fa-whatsapp"></i>
+</button>
+        
         <!-- mapa de google -->
         <div class="ubicacion" style="padding-bottom: 50px; text-align: center;">
             <i class="fa-solid fa-location-dot"></i>
@@ -88,7 +112,7 @@
                 width="100%" height="300" style="border:0; max-width: 600px; border-radius: 8px;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-            <p id="info">Info</p>
+         
         </div>
         
     </div> <!-- Fin del main-content -->

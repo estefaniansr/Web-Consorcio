@@ -45,75 +45,48 @@
         </div>
 
 
-        <div class="alquileres">
-            <!-- Bloques de servicio mejorados y con mejor descripción para el modal -->
-            <div class="servicio"
-                onclick="abrirModal('Equipamiento Estratégico de su Propiedad', 'Asesoramiento profesional para equipar y ambientar su propiedad, elevando el estándar y la tarifa de alquiler temporario. Esto incluye la provisión de mobiliario y ropa blanca clave para una experiencia premium.')">
-                <i class="fa-solid fa-couch"></i>
-            </div>
-            <div class="servicio"
-                onclick="abrirModal('Publicación y Marketing Profesional', 'Con la ayuda de nuestro equipo de fotógrafos profesionales, creamos un perfil atractivo de su propiedad y la posicionamos en las principales plataformas de alquileres a nivel mundial para garantizar la máxima ocupación.')">
-                <i class="fa-solid fa-camera"></i>
-            </div>
-            <div class="servicio"
-                onclick="abrirModal('Atención Premium a Huéspedes (Check-in/Check-out)', 'Nos encargamos de todo el ciclo de atención: desde la comunicación previa, la cálida recepción (check-in) y la asistencia durante su estadía, hasta la despedida (check-out) y la verificación del estado del inmueble.')">
-                <i class="fa-solid fa-handshake"></i>
-            </div>
-            <div class="servicio"
-                onclick="abrirModal('Servicio de Limpieza y Reposición de Amenities', 'Nos encargamos de la limpieza profunda en cada recambio de huésped, asegurando estándares hoteleros. Además, gestionamos la reposición de amenities, ropa de cama y elementos básicos, manteniendo su propiedad impecable.')">
-                <i class="fa-solid fa-paint-roller"></i>
-            </div>
-            <div class="servicio"
-                onclick="abrirModal('Mantenimiento Proactivo y Asistencia Técnica', 'Gestionamos todas las reparaciones menores y el mantenimiento preventivo del inmueble. Estamos en contacto constante con los huéspedes para resolver cualquier inconveniente técnico o logístico de manera inmediata.')">
-                <i class="fa-solid fa-message"></i>
-            </div>
-            <div class="servicio"
-                onclick="abrirModal('Rendición de Cuentas Transparente y Mensual', 'Mensualmente nos encargamos de liquidar y transferirle lo recaudado, adjuntando un detalle exhaustivo de ingresos, egresos y el estado de ocupación, garantizando total claridad financiera.')">
-                <i class="fa-solid fa-calculator"></i>
-            </div>
-        </div>
-
-        <!-- MODAL (fuera del div principal para mantener la estructura) -->
-        <div id="modal-consorcio" class="modal">
-            <div class="modal-content">
-                <span class="cerrar" onclick="cerrarModal()">&times;</span>
-                <h3 id="modal-nombre"></h3>
-                <p id="modal-desc"></p>
-            </div>
-        </div>
-
         <!-- boton de whatsapp-->
-        <div class="wpp">
-            <button class="btn btn-success w-100 mt-2" onclick="pedirWhatsApp('${producto.nombre}')">
-                <i class="fab fa-whatsapp"></i>
-        </div>
-
-        <!-- SECCIÓN INCLUYE -->
-        <div class="incluye" style="max-width: 800px; margin: 10px auto 50px; padding: 0 20px;">
-
-            <div class="incluye2">
-                <h2 style="font-size: 1.8rem; margin-bottom: 1; border-bottom: 2px solid var(--porcelana);">Incluye</h2>
-                <p style="font-size: 1rem; line-height: 1.6;">
-                <p> Cobro y control mensual de alquileres. </p>
-                <p> Gestión de vencimientos y renovaciones de contratos.</p>
-                <p>Coordinación de reparaciones, limpieza y mantenimiento.</p>
-                <p>Asesoramiento legal y contable básico.</p>
-                <p>Reportes periódicos para propietarios.</p>
-                </p>
-            </div>
+        
+           <button class="btn-wpp-fixed" onclick="pedirWhatsApp('WhatsApp')">
+    <i class="fab fa-whatsapp"></i>
+</button>
+        
 
 
-                <h2 style="font-size: 1.8rem; margin-bottom: 10px;border-bottom: 2px solid var(--porcelana);">Beneficios</h2>
+       <!-- SECCIÓN INCLUYE -->
+<div class="incluye" style="max-width: 800px; margin: 20px auto 50px; padding: 0 20px;">
 
-            <div class="beneficios" style="margin-top: 30px;">
-                <p style="line-height: 1.6; ">
-                   <p> Mayor rentabilidad gracias a una gestión eficiente.</p>
-                    <p>Menos estrés: todo está controlado por profesionales de confianza.</p>
-                    <p>Comunicación directa y seguimiento personalizado de cada propiedad.</p>
-                </p>
-            </div>
-        </div>
-        <!-- FIN SECCIÓN RENTABILIDAD Y TIEMPO -->
+    <!-- Incluye -->
+    <div class="incluye-box" style="padding: 10px 0; border-radius: 12px; margin-bottom: 30px;">
+        <h2 style="font-size: 1.8rem; border-bottom: 2px solid var(--porcelana); padding-bottom: 8px; padding-left: 50px;">
+            Incluye
+        </h2>
+
+        <ul style="font-size: 1rem; line-height: 1.7; margin-top: 15px; padding-left: 50px;">
+            <li>Cobro y control mensual de alquileres.</li>
+            <li>Gestión de vencimientos y renovaciones de contratos.</li>
+            <li>Coordinación de reparaciones, limpieza y mantenimiento.</li>
+            <li>Asesoramiento legal y contable básico.</li>
+            <li>Reportes periódicos para propietarios.</li>
+        </ul>
+    </div>
+
+    <!-- Beneficios -->
+    <div class="incluye-box" style="padding: 10px 0; border-radius: 12px;">
+        <h2 style="font-size: 1.8rem; border-bottom: 2px solid var(--porcelana); padding-bottom: 8px; padding-left: 50px;">
+            Beneficios
+        </h2>
+
+        <ul style="font-size: 1rem; line-height: 1.7; margin-top: 15px; padding-left: 50px;">
+            <li>Mayor rentabilidad gracias a una gestión eficiente.</li>
+            <li>Menos estrés: todo está controlado por profesionales de confianza.</li>
+            <li>Comunicación directa y seguimiento personalizado de cada propiedad.</li>
+        </ul>
+    </div>
+
+</div>
+<!-- FIN -->
+
 
     </div> <!-- Fin del main-content -->
 

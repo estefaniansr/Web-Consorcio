@@ -109,7 +109,8 @@ header {
 
     /* Opcional: Si el texto sigue quedando muy chico/grande, se puede ajustar */
     .presentacion h1 {
-        font-size: 1.8rem;
+        font-size: 2.0rem;
+     
     }
 }
 
@@ -193,7 +194,7 @@ header {
     background-repeat: no-repeat;
     color: white;
     text-align: center;
-    padding: 120 px 30 px;
+    padding: 120px 30px;
     position: relative;
     min-height: 400px;
     /** mas grande*/
@@ -354,7 +355,7 @@ header {
 }
 .btn {
   display: inline-block;
-  background-color: #007bff; /* azul profesional */
+  background-color: #007bff; 
   color: white;
   padding: 12px 28px;
   border-radius: 30px;
@@ -375,6 +376,36 @@ header {
   transform: translateY(0);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
+
+.btn-wpp-fixed {
+    position: fixed;       /* SEGUIR AL USUARIO */
+    bottom: 20px;          /* distancia desde abajo */
+    right: 20px;           /* distancia desde la derecha */
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* verde WhatsApp */
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    z-index: 9999;         /* queda arriba de todo */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-wpp-fixed:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+.btn-wpp-fixed i {
+    color: white;
+    pointer-events: none; /* evita problemas al clickear */
+}
 .cta {
   text-align: center;
   color:#135eb4;
@@ -383,7 +414,7 @@ header {
 
 .cta .btn {
   display: inline-block;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 /* Media Query para hacer la vista responsiva en dispositivos pequeños (opcional) */
@@ -396,4 +427,254 @@ header {
     }
 
 
+}
+.servicios {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.iconos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.servicio {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.servicio i {
+    font-size: 50px;
+    color: #233145; /* Verde administrativo */
+    margin-bottom: 15px;
+}
+
+.servicio p {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+.servicio p {
+    color: #333; /* o negro */
+}
+.bloques-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    padding: 20px 10px 60px;
+}
+
+.bloque {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-align: left;
+}
+
+.bloque:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
+}
+
+.bloque img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display:block;
+}
+
+.bloque h3 {
+    color: #222 !important;
+    font-size: 22px !important;
+    text-align: center !important;
+    margin-top: 15px !important;
+    display: block !important;
+}
+
+.bloque p {
+    padding: 0 20px 20px;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+.bloque ul {
+    padding: 10px 25px 25px;
+    list-style: disc;
+    color: #333;
+}
+
+.bloque ul li {
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+.valores-bloque {
+    margin-top: 60px;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.valores-bloque img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.contenido-valores {
+    padding: 30px 40px 40px;
+}
+
+.contenido-valores h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.contenido-valores ul {
+    list-style: disc;
+    padding-left: 25px;
+    font-size: 17px;
+    color: #333;
+}
+
+.contenido-valores ul li {
+    margin-bottom: 10px;
+}
+.contenido-valores h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #222; 
+}
+/* ---------- CONTENEDOR GENERAL ---------- */
+.formulario {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* ---------- FORMULARIO EN GRID ---------- */
+.datos {
+    width: 100%;
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 30px;
+}
+
+/* ---------- LABELS (TÍTULOS DE CAMPOS) ---------- */
+label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #e8edf5;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* ---------- INPUTS ---------- */
+.datos input,
+.datos textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    color: #ffffff;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #6b7a8f;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+.datos input:focus,
+.datos textarea:focus {
+    border-bottom-color: #3a7bd5;
+}
+
+/* ---------- TEXTAREA ---------- */
+.datos textarea {
+    height: 130px;
+    resize: none;
+    grid-column: span 2;
+}
+
+/* ---------- BLOQUE ENCARGADO ---------- */
+.encargado {
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+#encargado-txt {
+    font-size: 15px;
+    font-weight: 600;
+    color: #e8edf5;
+}
+
+/* ---------- BOTÓN ---------- */
+#enviar-btn {
+    grid-column: span 2;
+    background: #3a7bd5;
+    color: white;
+    padding: 14px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    margin-top: 15px;
+}
+
+#enviar-btn:hover {
+    background: #2f6bb8;
+    transform: translateY(-2px);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 700px) {
+    .datos {
+        grid-template-columns: 1fr;
+    }
+
+    textarea, 
+    .encargado,
+    #enviar-btn {
+        grid-column: span 1;
+    }
+}
+.incluye-box {
+    padding: 25px;
+    border: 1px solid var(--porcelana);
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.incluye-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--porcelana);
+    padding-bottom: 5px;
+}
+
+.incluye-lista li {
+    margin: 10px 0;
+    line-height: 1.6;
 }
