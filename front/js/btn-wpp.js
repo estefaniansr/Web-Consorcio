@@ -1,6 +1,6 @@
 function pedirWhatsApp(nombre) {
-    const mensaje = `Hola! me comunico para...`;
-    const numero = "Num";
+    const mensaje = `Hola! Quiero más infromación`;
+    const numero = "5491170580813";
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, "_blank");
 }

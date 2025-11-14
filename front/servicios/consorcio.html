@@ -39,75 +39,40 @@
         </div>
 
 
-        <div class="consorcio">
-            <!-- Bloques de servicio mejorados y con mejor descripción para el modal -->
-            <div class="servicio"
-                onclick="abrirModal('Atención Personalizada y Visitas Periódicas', 'Priorizamos la cercanía. Ofrecemos atención directa y nos adecuamos a la disponibilidad de cada consorcista, realizando visitas frecuentes y programadas para supervisar el buen funcionamiento del edificio.')">
-                <i class="fa-solid fa-handshake"></i>
-            </div>
-            <div class="servicio"
-                onclick="abrirModal('Liquidación y Recaudación de Expensas Claras','Garantizamos la máxima transparencia con resúmenes de gastos detallados, rendición de cuentas accesible online, confección precisa de expensas y recibos de pago. Incluye gestión proactiva de seguimiento de deudores.')">
-                <i class="fa-solid fa-building"></i>
-            </div>
-            <div class="servicio"
-                onclick="abrirModal('Administración Fiduciaria de Fondos','Manejo ético y transparente de las finanzas del consorcio. Realizamos la liquidación de sueldos y jornales, liquidaciones impositivas y la gestión clara de los fondos en cuentas bancarias exclusivas del consorcio.')">
-                <i class="fa-solid fa-money-check-dollar"></i>
-            </div>
-            <div class="servicio"
-                onclick="abrirModal('Mantenimiento Proactivo y Preventivo','Nos enfocamos en la conservación de la infraestructura. Implementamos planes de mantenimiento preventivo, solicitamos presupuestos competitivos, contratamos y supervisamos la ejecución de servicios y proveedores.')">
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-            </div>
-            <div class="servicio"
-                onclick="abrirModal('Asesoramiento Profesional Integral','Ponemos a disposición un equipo multidisciplinario de arquitectos, abogados y contadores para abordar cualquier conflicto legal, estructural o contable que pueda surgir, garantizando una resolución rápida y eficaz.')">
-                <i class="fa-solid fa-message"></i>
-            </div>
-            <div class="servicio"
-                onclick="abrirModal('Control y Supervisión de Proveedores', 'A lo largo de los años hemos seleccionado y formado un equipo de proveedores de alta eficiencia y eficacia. Aseguramos el estricto control sobre la ejecución de los trabajos contratados y la calidad de los servicios prestados.')">
-                <i class="fa-solid fa-person"></i>
-            </div>
-
-        </div>
-
-        <!-- MODAL (fuera del div principal para mantener la estructura) -->
-        <div id="modal-consorcio" class="modal">
-            <div class="modal-content">
-                <span class="cerrar" onclick="cerrarModal()">&times;</span>
-                <h3 id="modal-nombre"></h3>
-                <p id="modal-desc"></p>
-            </div>
-        </div>
-
-        <!-- boton de whatsapp-->
-        <div class="wpp">
-            <button class="btn btn-success w-100 mt-2" onclick="pedirWhatsApp('${producto.nombre}')">
-                <i class="fab fa-whatsapp"></i>
-        </div>
-
-        <!-- SECCIÓN INCLUYE -->
-        <div class="incluye" style="max-width: 800px; margin: 10px auto 50px; padding: 0 20px;">
-
-            <div class="incluye2">
-                <h2 style="font-size: 1.8rem; margin-bottom: 1; border-bottom: 2px solid var(--porcelana);">Incluye</h2>
-                <p style="font-size: 1rem; line-height: 1.6;">
-                <p> Liquidación mensual de expensas con informes detallados y accesibles. </p>
-                <p> Pago a proveedores, control de presupuestos y registro contable actualizado.</p>
-                <p> Coordinación de mantenimiento preventivo y correctivo.</p>
-                <p>Organización de asambleas y elaboración de actas.</p>
-                <p>Comunicación directa y constante con propietarios.</p>
-                <p>Portal digital de consultas y descargas.</p>
-                </p>
-            </div>
+         <!-- boton de whatsapp-->
+        
+           <button class="btn-wpp-fixed" onclick="pedirWhatsApp('WhatsApp')">
+    <i class="fab fa-whatsapp"></i>
+</button>
+        
 
 
-            <div class="beneficios" style="margin-top: 30px;">
-                <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Beneficios</h3>
-                <p style="line-height: 1.6;">
-                    Transparencia total en el manejo de fondos.
-                    Comunicación fluida con los propietarios.
-                    Reducción de conflictos internos gracias a una gestión equilibrada y profesional.
-                </p>
-            </div>
-        </div>
+       <div class="incluye" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+    <div class="incluye-box">
+        <h2>Incluye</h2>
+
+        <ul class="incluye-lista">
+            <li>Liquidación mensual de expensas con informes detallados y accesibles.</li>
+            <li>Pago a proveedores, control de presupuestos y registro contable actualizado.</li>
+            <li>Coordinación de mantenimiento preventivo y correctivo.</li>
+            <li>Organización de asambleas y elaboración de actas.</li>
+            <li>Comunicación directa y constante con propietarios.</li>
+            <li>Portal digital de consultas y descargas.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="beneficios" style="max-width: 900px; margin: 20px auto 40px; padding: 0 20px;">
+    <div class="incluye-box">
+        <h2>Beneficios</h2>
+
+        <ul class="incluye-lista">
+            <li>Transparencia total en el manejo de fondos.</li>
+            <li>Comunicación fluida con los propietarios.</li>
+            <li>Reducción de conflictos internos gracias a una gestión equilibrada y profesional.</li>
+        </ul>
+    </div>
+</div>
         <!-- FIN SECCIÓN AUDITORÍA -->
 
     </div> <!-- Fin del main-content -->
