@@ -4,8 +4,9 @@
     --negro: #11181c;
     --porcelana: #f8f8f8;
     --grisBlanco: #dcdddd;
-
 }
+
+/* ==================== ESTILOS GENERALES Y VARIABLES CSS ==================== */
 
 body {
     background: var(--principal);
@@ -16,85 +17,77 @@ body {
     font-size: 17px;
 }
 
-/* =============== HEADER ====================*/
+/* ==================== ESTILOS DEL ENCABEZADO Y BARRA DE NAVEGACIÓN ==================== */
+
 header {
     background: rgb(62, 80, 105, 0.92);
     backdrop-filter: blur(2px);
     width: 100%;
-
-    /* MODIFICADO: Aumentamos el padding para darle más altura y espacio a los botones */
     padding: 18px 20px;
-    
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    /* MODIFICADO: Aumentamos el tamaño de la fuente dentro de la barra */
     font-size: 1.1rem;
-    /* 1.1 veces el tamaño base del body (aprox 18.7px) */
-
     transition: transform 0.3s ease;
 }
 
-/* Los botones se adaptarán automáticamente al font-size del header */
+/* ==================== ESTILOS DE LOS ELEMENTOS DE NAVEGACIÓN ==================== */
+
 .txt,
 .txt-activo,
 .select {
     margin: 0 12px;
-    /* Aumentamos ligeramente el margen para separarlos más */
     padding: 0.6rem 1.2rem;
-    /* Aumentamos el padding para que parezcan botones más grandes y 'clickables' */
     cursor: pointer;
     text-decoration: none;
     border: none;
     background: none;
 }
+
+/* ==================== ESTILOS RESPONSIVOS PARA DISPOSITIVOS MÓVILES ==================== */
+
 @media screen and (max-width: 600px) {
     header {
-        flex-direction: row;      /* mantener horizontal */
-        justify-content: flex-start; /* alinear a la izquierda */
-        overflow-x: auto;         /* permite scrollear si no caben */
-        padding: 8px 10px;        /* más compacto */
-        font-size: 0.85rem;       /* texto más pequeño */
-        gap: 10px;                /* separación entre links */
+        flex-direction: row;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 8px 10px;
+        font-size: 0.85rem;
+        gap: 10px;
     }
 
     .txt, .txt-activo, .select {
-        flex: 0 0 auto;           /* que no se reduzcan demasiado */
-        margin: 0;                /* sin margen extra */
-        padding: 4px 8px;         /* padding compacto */
+        flex: 0 0 auto;
+        margin: 0;
+        padding: 4px 8px;
         font-size: 0.85rem;
     }
 
     .select {
-        width: auto;              /* no ocupa todo el ancho */
+        width: auto;
     }
 
     header::-webkit-scrollbar {
-        height: 4px;              /* scrollbar fino */
+        height: 4px;
     }
 }
+
+/* ==================== ESTILOS DE LOS ESTADOS DE LOS ELEMENTOS DE NAVEGACIÓN ==================== */
+
 .txt {
     color: #797d7d;
 }
 
 .txt-activo {
     color: var(--grisBlanco);
-    /* Color para la página actual */
-    /* Opcional: para que se destaque más */
-    /* border: 1px solid var(--grisBlanco); */
 }
 
-/* Ajuste del select para que el centrado sea correcto */
 .select {
     color: #797d7d;
-    /* Ajuste si quieres que el select mantenga el mismo tamaño que los <a> */
-    /* line-height: 1.5; */
 }
 
 .select:hover,
@@ -102,10 +95,9 @@ header {
     color: var(--grisBlanco);
 }
 
-/* ==== PRESENTACION ===== */
+/* ==================== ESTILOS DE LA SECCIÓN DE PRESENTACIÓN PRINCIPAL ==================== */
 
 .presentacion {
-
     background-image: url("../img/obelisco.jpg");
     background-size: cover;
     background-position: center;
@@ -118,27 +110,23 @@ header {
     position: relative;
 }
 
-/* Media Query ESENCIAL para Móviles */
-@media screen and (max-width: 600px) {
+/* ==================== MEDIA QUERIES PARA LA SECCIÓN DE PRESENTACIÓN EN MÓVILES ==================== */
 
-    /* Ajustamos el padding en móviles para asegurar que los botones no queden tapados */
+@media screen and (max-width: 600px) {
     .presentacion {
         min-height: 80vh;
-        /* Aumentamos un poco la altura para que la imagen se vea mejor */
-        padding: 80px 20px;;
-        /* Reducimos el padding superior para que el texto aparezca antes */
+        padding: 80px 20px;
         background-attachment: scroll;
-        /* Desactivamos el efecto 'fixed' en móviles para evitar problemas de rendimiento y visualización */
-         min-height: 60vh;
-           background-position: center top; /* que se vea la parte importante */
+        min-height: 60vh;
+        background-position: center top;
     }
 
-    /* Opcional: Si el texto sigue quedando muy chico/grande, se puede ajustar */
     .presentacion h1 {
         font-size: 2.0rem;
-     
     }
 }
+
+/* ==================== ESTILOS DE LA SECCIÓN NOSOTROS ==================== */
 
 .nosotros {
     text-align: center;
@@ -152,6 +140,8 @@ header {
 .nosotros #compromiso {
     color: #c1c2c2;
 }
+
+/* ==================== ESTILOS DE LA SECCIÓN DE SERVICIOS ==================== */
 
 .servicios {
     text-align: center;
@@ -170,6 +160,8 @@ header {
     cursor: pointer;
     color: var(--negro);
 }
+
+/* ==================== ESTILOS DEL MODAL Y SUS COMPONENTES ==================== */
 
 .modal {
     display: none;
@@ -197,7 +189,8 @@ header {
     position: relative;
 }
 
-/* Botón cerrar (X) */
+/* ==================== ESTILOS DEL BOTÓN DE CERRAR MODAL ==================== */
+
 .cerrar {
     position: absolute;
     top: -10px;
@@ -212,7 +205,8 @@ header {
     color: var(--negro);
 }
 
-/*imagen*/
+/* ==================== ESTILOS ADICIONALES DE LA SECCIÓN DE PRESENTACIÓN ==================== */
+
 .presentacion {
     background-image: url("../img/obelisco.jpg");
     background-size: cover;
@@ -223,10 +217,10 @@ header {
     padding: 120px 30px;
     position: relative;
     min-height: 400px;
-    /** mas grande*/
 }
 
-/*imagen socura*/
+/* ==================== ESTILOS DEL OVERLAY OSCURO SOBRE LA IMAGEN DE PRESENTACIÓN ==================== */
+
 .presentacion::before {
     content: "";
     position: absolute;
@@ -235,61 +229,51 @@ header {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    /*oscurece fondo*/
 }
 
-/*texto sobre imagen oscura*/
+/* ==================== ESTILOS DEL TEXTO SOBRE LA IMAGEN DE PRESENTACIÓN ==================== */
+
 .presentacion h1,
 .presentacion h2 {
     position: relative;
     z-index: 1;
 }
 
-/* estilos para el footer donde se ven los datos de TELEFONO HORARIO Y DIR.OFICINA*/
-/* Estilos para la sección completa */
+/* ==================== ESTILOS DE LA SECCIÓN DE INFORMACIÓN DE CONTACTO ==================== */
+
 .contact-info {
     display: flex;
-    /* Para poner los bloques uno al lado del otro */
     justify-content: space-around;
-    /* Distribuye el espacio entre los bloques */
     align-items: flex-start;
-    /* Alinea los elementos al inicio (arriba) */
     background-color: #000000;
-    /* Fondo negro oscuro */
     color: #ffffff;
-    /* Color de texto predeterminado: blanco */
     padding: 40px 20px;
     font-family: Arial, sans-serif;
-    /* Puedes cambiar la fuente */
     border-top: 5px solid #00c6ff;
-    /* Simula la franja azul superior */
 }
 
-/* Estilos para cada bloque de información (teléfono, horario, oficinas) */
+/* ==================== ESTILOS DE LOS BLOQUES INDIVIDUALES DE INFORMACIÓN ==================== */
+
 .info-block {
     text-align: center;
-    /* Centra el texto dentro de cada bloque */
     flex: 1;
-    /* Permite que el bloque crezca y ocupe espacio equitativamente */
     padding: 0 15px;
     max-width: 300px;
-    /* Limita el ancho de cada bloque */
 }
 
-/* Estilos para los iconos (teléfono, reloj, mapa) */
+/* ==================== ESTILOS DE LOS ICONOS EN LOS BLOQUES DE INFORMACIÓN ==================== */
+
 .info-block i {
     color: #06a9db;
-    /* Color verde brillante para los iconos */
     font-size: 30px;
     margin-bottom: 10px;
     display: block;
-    /* Asegura que el icono esté en su propia línea para centrarlo */
 }
 
-/* Estilos para los títulos (Teléfono, Horario, Oficinas) */
+/* ==================== ESTILOS DE LOS TÍTULOS EN LOS BLOQUES DE INFORMACIÓN ==================== */
+
 .info-block h3 {
     color: #ffffff;
-    /* Título en blanco */
     font-size: 18px;
     font-weight: bold;
     margin-top: 0;
@@ -297,25 +281,25 @@ header {
     text-transform: uppercase;
 }
 
-/* Estilos para los párrafos de información */
+/* ==================== ESTILOS DEL TEXTO EN LOS BLOQUES DE INFORMACIÓN ==================== */
+
 .info-block p {
     color: #cccccc;
-    /* Un gris claro para el texto secundario */
     font-size: 14px;
     margin: 5px 0;
     line-height: 1.4;
 }
 
-/* Estilo específico para resaltar el número de teléfono/datos principales si es necesario */
 .info-block p:first-of-type {
     color: #ffffff;
-    /* El número de teléfono más destacado en blanco */
 }
 
-    .info-block {
-        margin-bottom: 30px;
-        width: 100%;
-    }
+.info-block {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/* ==================== ESTILOS DE LA SECCIÓN INTRO CON IMAGEN ==================== */
 
 .intro {
   position: relative;
@@ -327,19 +311,20 @@ header {
 
 .intro-img {
   width: 100%;
-  height: 70vh; /* Se adapta al tamaño de pantalla */
-  min-height: 400px; /* No se achica demasiado */
+  height: 70vh;
+  min-height: 400px;
   object-fit: cover;
   object-position: center;
-  filter: brightness(55%); /* un poco más oscuro para contraste */
-  transition: transform 4s ease; /* animación sutil */
+  filter: brightness(55%);
+  transition: transform 4s ease;
 }
 
 .intro:hover .intro-img {
-  transform: scale(1.10); /* efecto leve de zoom al pasar el mouse */
+  transform: scale(1.10);
 }
 
-/*imagen socura*/
+/* ==================== ESTILOS DEL OVERLAY OSCURO SOBRE LA IMAGEN INTRO ==================== */
+
 .intro::before {
     content: "";
     position: absolute;
@@ -349,18 +334,19 @@ header {
     bottom: 0;
     background-color: rgba(48, 47, 47, 0.5);
     z-index: 1;
-    /*oscurece fondo*/
 }
+
 .intro h1,
 .intro p {
     position: relative;
     z-index: 1;
 }
 
-/* Texto centrado sobre la imagen */
+/* ==================== ESTILOS DEL TEXTO SOBRE LA IMAGEN INTRO ==================== */
+
 .intro-text {
   position: absolute;
-  top: 50%; /* antes 50%, ahora un poco más abajo */
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgb(255, 255, 255);
@@ -379,38 +365,44 @@ header {
   line-height: 1.6;
   color: var(--grisBlanco);
 }
+
+/* ==================== MEDIA QUERIES PARA LA SECCIÓN INTRO EN MÓVILES ==================== */
+
 @media screen and (max-width: 600px) {
   .intro-img {
-      height: 50vh;           /* altura más pequeña para móviles */
-      min-height: 250px;      
-      object-fit: cover;      /* mantiene el efecto cover */
-      object-position: center top; /* evita cortar la parte importante */
+      height: 50vh;
+      min-height: 250px;
+      object-fit: cover;
+      object-position: center top;
   }
 
   .intro-text {
-      position: absolute;     /* sigue sobre la imagen */
-      top: 50%;               /* centrado vertical */
-      left: 50%;              /* centrado horizontal */
+      position: absolute;
+      top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
-      width: 90%;             /* ocupa casi todo el ancho */
-      max-width: 350px;       /* ancho máximo en móviles */
+      width: 90%;
+      max-width: 350px;
       text-align: center;
       padding: 0 10px;
   }
 
   .intro-text h1 {
-      font-size: 1.5rem;      /* más pequeño para móvil */
+      font-size: 1.5rem;
       line-height: 1.2;
   }
 
   .intro-text p {
-      font-size: 0.9rem;      /* más legible en móvil */
+      font-size: 0.9rem;
       line-height: 1.3;
   }
 }
+
+/* ==================== ESTILOS DE LOS BOTONES GENERALES ==================== */
+
 .btn {
   display: inline-block;
-  background-color: #007bff; 
+  background-color: #007bff;
   color: white;
   padding: 12px 28px;
   border-radius: 30px;
@@ -422,7 +414,7 @@ header {
 }
 
 .btn:hover {
-  background-color: #0056b3; /* azul más oscuro */
+  background-color: #0056b3;
   transform: translateY(-2px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
@@ -432,13 +424,15 @@ header {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* ==================== ESTILOS DEL BOTÓN FLOTANTE DE WHATSAPP ==================== */
+
 .btn-wpp-fixed {
-    position: fixed;       /* SEGUIR AL USUARIO */
-    bottom: 20px;          /* distancia desde abajo */
-    right: 20px;           /* distancia desde la derecha */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
     width: 60px;
     height: 60px;
-    background-color: #25D366; /* verde WhatsApp */
+    background-color: #25D366;
     border-radius: 50%;
     border: none;
     display: flex;
@@ -447,7 +441,7 @@ header {
     font-size: 28px;
     color: white;
     cursor: pointer;
-    z-index: 9999;         /* queda arriba de todo */
+    z-index: 9999;
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -459,12 +453,15 @@ header {
 
 .btn-wpp-fixed i {
     color: white;
-    pointer-events: none; /* evita problemas al clickear */
+    pointer-events: none;
 }
+
+/* ==================== ESTILOS DE LA SECCIÓN CALL TO ACTION ==================== */
+
 .cta {
   text-align: center;
   color:#135eb4;
-  background: linear-gradient(135deg, rgba(0,123,255,0.1), rgba(0,0,0,0.1)); /* opcional, da un toque moderno */
+  background: linear-gradient(135deg, rgba(0,123,255,0.1), rgba(0,0,0,0.1));
 }
 
 .cta .btn {
@@ -472,17 +469,18 @@ header {
   margin-top: 20px;
 }
 
-/* Media Query para hacer la vista responsiva en dispositivos pequeños (opcional) */
+/* ==================== MEDIA QUERIES PARA LA SECCIÓN DE CONTACTO EN DISPOSITIVOS PEQUEÑOS ==================== */
+
 @media (max-width: 768px) {
     .contact-info {
         flex-direction: column;
-        /* Apila los bloques verticalmente en móviles */
         align-items: center;
         padding: 30px 10px;
     }
-
-
 }
+
+/* ==================== ESTILOS ACTUALIZADOS DE LA SECCIÓN DE SERVICIOS ==================== */
+
 .servicios {
     text-align: center;
     padding: 50px 20px;
@@ -505,7 +503,7 @@ header {
 
 .servicio i {
     font-size: 50px;
-    color: #233145; /* Verde administrativo */
+    color: #233145;
     margin-bottom: 15px;
 }
 
@@ -519,9 +517,13 @@ header {
     transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
+
 .servicio p {
-    color: #333; /* o negro */
+    color: #333;
 }
+
+/* ==================== ESTILOS DE LOS BLOQUES DE INFORMACIÓN ==================== */
+
 .bloques-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -575,6 +577,9 @@ header {
     margin-bottom: 6px;
     font-size: 16px;
 }
+
+/* ==================== ESTILOS DEL BLOQUE DE VALORES ==================== */
+
 .valores-bloque {
     margin-top: 60px;
     background: #ffffff;
@@ -612,20 +617,22 @@ header {
 .contenido-valores ul li {
     margin-bottom: 10px;
 }
+
 .contenido-valores h2 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 28px;
-    color: #222; 
+    color: #222;
 }
-/* ---------- CONTENEDOR GENERAL ---------- */
+
+/* ==================== ESTILOS DEL FORMULARIO DE CONTACTO ==================== */
+
 .formulario {
     display: flex;
     justify-content: center;
     margin-top: 40px;
 }
 
-/* ---------- FORMULARIO EN GRID ---------- */
 .datos {
     width: 100%;
     max-width: 850px;
@@ -634,7 +641,6 @@ header {
     gap: 25px 30px;
 }
 
-/* ---------- LABELS (TÍTULOS DE CAMPOS) ---------- */
 label {
     font-size: 15px;
     font-weight: 600;
@@ -643,7 +649,6 @@ label {
     display: block;
 }
 
-/* ---------- INPUTS ---------- */
 .datos input,
 .datos textarea {
     width: 100%;
@@ -662,14 +667,12 @@ label {
     border-bottom-color: #3a7bd5;
 }
 
-/* ---------- TEXTAREA ---------- */
 .datos textarea {
     height: 130px;
     resize: none;
     grid-column: span 2;
 }
 
-/* ---------- BLOQUE ENCARGADO ---------- */
 .encargado {
     grid-column: span 2;
     display: flex;
@@ -684,7 +687,6 @@ label {
     color: #e8edf5;
 }
 
-/* ---------- BOTÓN ---------- */
 #enviar-btn {
     grid-column: span 2;
     background: #3a7bd5;
@@ -703,18 +705,22 @@ label {
     transform: translateY(-2px);
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* ==================== MEDIA QUERIES PARA EL FORMULARIO EN DISPOSITIVOS PEQUEÑOS ==================== */
+
 @media (max-width: 700px) {
     .datos {
         grid-template-columns: 1fr;
     }
 
-    textarea, 
+    textarea,
     .encargado,
     #enviar-btn {
         grid-column: span 1;
     }
 }
+
+/* ==================== ESTILOS DE LA CAJA DE INCLUSIÓN ==================== */
+
 .incluye-box {
     padding: 25px;
     border: 1px solid var(--porcelana);
